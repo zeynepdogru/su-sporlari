@@ -1,0 +1,65 @@
+
+<!DOCTYPE html>
+<html lang="tr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Rezervasyon</title>
+    <link rel="stylesheet" href="css/rezervasyon.css" />
+    <link rel="stylesheet" href="css/sidebar.css" />
+     <link rel="stylesheet" href="css/galeri.css" />
+    
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body>
+    <div id="sidebar-container"></div>
+    <header class="site-header">
+      <div class="container">
+        <img src="images/logo.jpg" class="logo" />
+        <h1>Ansal WindSurf</h1>
+      </div>
+    </header>
+    <div class="container">
+      <p class="aciklama">
+       Uygun tarih ve saat dilimini seçerek rezervasyonunuzu oluşturabilirsiniz.
+      </p>
+    </div>
+
+    <main class="container">
+      <form id="reservation-form" class="reservation-form" method="POST" action="send_mail.php">
+        <label for="name">Ad Soyad</label>
+        <input type="text" id="name" name="name" required />
+
+        <label for="email">E-posta</label>
+        <input type="email" id="email" name="email" required />
+
+        <label for="branch">Branş</label>
+        <select id="branch" name="branch" required>
+          <option value="">Branş seçiniz..</option>
+          <option value="kano">Kano</option>
+          <option value="sorf">Sörf</option>
+          <option value="yelken">SUP</option>
+        </select>
+
+        <label for="date">Tarih</label>
+        <input type="date" id="date" name="date" required />
+       <label for="time">Saat</label>
+       <select id="time" name="time" required>
+        
+      </select>
+        <button type="submit" class="btn">Rezervasyon Gönder</button>
+  
+    </div>
+      </form>
+      <p id="message" style="margin-top: 20px; color: green;"></p>
+
+    </main>
+
+    <script src="rezervasyon.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>

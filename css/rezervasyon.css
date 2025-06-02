@@ -1,0 +1,49 @@
+/* FORM */
+.reservation-form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+  max-width: 500px;
+  margin: auto;
+  padding: 4rem;
+  background-color: #f1f1f1;
+  border-radius: 15px;
+  font-size: 1.5rem;
+  font-style: italic;
+}
+
+.reservation-form label {
+  font-weight: bold;
+}
+
+.reservation-form input,
+.reservation-form select {
+  padding: 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 1rem;
+}
+.reservation-form option {
+  font-size: 1.2rem;
+}
+.reservation-form button {
+  background-color: #005f99;
+  color: #ccc;
+  border-radius: 5px;
+  margin-top: 2rem;
+  height: 4vh;
+  font-size: larger;
+  cursor: pointer;
+}
+.aciklama {
+  font-size: 1.5rem;
+  margin: auto;
+  max-width: 800px;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+#message {
+  margin-top: 10px;
+  text-align: center;
+  font-weight: bold;
+}

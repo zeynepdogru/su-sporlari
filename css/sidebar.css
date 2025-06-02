@@ -1,0 +1,140 @@
+/* Sidebar container */
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 5rem;
+  background-color: #034165;
+  transition: width 0.3s ease;
+  overflow-x: hidden;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+/* Açıldığında genişliği */
+.sidebar.open {
+  width: 15rem;
+}
+
+/* Toggle butonu (☰) */
+.sidebar-toggle {
+  background: none;
+  border: none;
+  color: white;
+  font-size: 2rem;
+  margin: 1rem;
+  cursor: pointer;
+  width: 50%;
+}
+
+.sidebar-content {
+  margin-top: 2rem;
+  display: none;
+  width: 100%;
+}
+
+.sidebar.open .sidebar-content {
+  display: block;
+}
+
+.sidebar.open .sidebar-toggle {
+  display: none;
+}
+
+.sidebar-content ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  width: 100%;
+  font-size: 1.2rem;
+}
+
+.sidebar-content li {
+  width: 100%;
+}
+
+.sidebar-content a {
+  display: block;
+  padding: 1rem;
+  color: white;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+
+.sidebar-content a:hover {
+  background-color: #005f87;
+}
+
+/* iconlar */
+.sidebar-footer {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  padding: 1rem;
+  border-top: 1px;
+  margin-top: auto;
+}
+
+.social-icon {
+  font-size: 1.5rem;
+  color: white;
+  transition: transform 0.3s, color 0.3s;
+}
+
+.social-icon:hover {
+  transform: scale(1.2);
+  color: #00b4d8;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .sidebar {
+    width: 4rem;
+  }
+
+  .sidebar.open {
+    width: 12rem;
+  }
+
+  .sidebar-toggle {
+    font-size: 1.5rem;
+    width: 100%;
+  }
+
+  .sidebar-content ul {
+    font-size: 1rem;
+  }
+
+  .social-icon {
+    font-size: 1.2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .sidebar {
+    width: 3.5rem;
+  }
+
+  .sidebar.open {
+    width: 100vw;
+    align-items: center;
+  }
+
+  .sidebar-content a {
+    text-align: center;
+    padding: 1rem 0;
+  }
+
+  .sidebar-footer {
+    flex-direction: row;
+    justify-content: center;
+    gap: 1rem;
+  }
+
+  .social-icon {
+    font-size: 1rem;
+  }
+}

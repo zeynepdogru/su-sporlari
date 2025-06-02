@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="tr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Fotoğraf Galerisi</title>
+    <link rel="stylesheet" href="css/galeri.css" />
+    <link rel="stylesheet" href="css/sidebar.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body>
+    <div id="sidebar-container"></div>
+    <header class="site-header">
+      <div class="container">
+        <img src="images/logo.jpg" class="logo" />
+        <h1>Ansal WindSurf</h1>
+      </div>
+    </header>
+
+    <div class="gallery-container">
+      <img src="images/1.jpg" alt="Fotoğraf 1" class="gallery-item" />
+      <img src="images/2.jpg" alt="Fotoğraf 2" class="gallery-item" />
+      <img src="images/3.jpg" alt="Fotoğraf 3" class="gallery-item" />
+      <img src="images/4.jpg" alt="Fotoğraf 4" class="gallery-item" />
+      <img src="images/5.jpg" alt="Fotoğraf 5" class="gallery-item" />
+      <img src="images/6.jpg" alt="Fotoğraf 6" class="gallery-item" />
+      <img src="images/7.jpg" alt="Fotoğraf 7" class="gallery-item" />
+      <img src="images/8.jpg" alt="Fotoğraf 8" class="gallery-item" />
+      <img src="images/9.jpg" alt="Fotoğraf 9" class="gallery-item" />
+      <img src="images/10.jpg" alt="Fotoğraf 10" class="gallery-item" />
+      <img src="images/11.jpg" alt="Fotoğraf 11" class="gallery-item" />
+    </div>
+
+    <!-- Lightbox -->
+    <div id="lightbox" class="lightbox">
+      <span class="close">&times;</span>
+      <button class="lightbox-prev">&#10094;</button>
+      <img id="lightbox-img" src="" alt="Büyük Görsel" />
+      <button class="lightbox-next">&#10095;</button>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
