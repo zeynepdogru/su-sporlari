@@ -3,6 +3,7 @@ document.addEventListener("DOMContentLoaded", function () {
   const timeSelect = document.getElementById("time");
   const branchSelect = document.getElementById("branch");
   const form = document.getElementById("reservation-form");
+  const messageDiv = document.getElementById("message");
 
   const allowedHours = [
     "10:00",
@@ -65,36 +66,60 @@ document.addEventListener("DOMContentLoaded", function () {
     branchSelect.value = selectedBranch;
   }
 
-  // --- Form gönderildiğinde uyarı ver ve formu sıfırla
+  // --- Form gönderildiğinde
   if (form) {
-    form.addEventListener("submit", function (e) {
+    form.addEventListener("submit", async function (e) {
       e.preventDefault();
-      alert("Rezervasyonuz gönderildi! Teşekkür ederiz.");
-      this.reset();
-      updateTimeOptions(toDateInputFormat(today)); // reset sonrası saatleri yenile
-    });
-  }
-});
-// Mail için
-document.addEventListener("DOMContentLoaded", function () {
-  const form = document.getElementById("reservation-form");
-  if (form) {
-    form.addEventListener("submit", function (e) {
-      e.preventDefault();
-      const formData = new FormData(this);
+      
+      // Form verilerini al
+      const formData = {
+        name: form.querySelector('input[name="name"]').value,
+        email: form.querySelector('input[name="email"]').value,
+        phone: form.querySelector('input[name="phone"]').value,
+        date: form.querySelector('input[name="date"]').value,
+        time: form.querySelector('select[name="time"]').value,
+        activity: form.querySelector('select[name="branch"]').value,
+        participants: form.querySelector('input[name="participants"]').value
+      };
 
-      fetch("send_mail.php", {
-        method: "POST",
-        body: formData,
-      })
-        .then((response) => response.text())
-        .then((data) => {
-          document.getElementById("message").innerText = data;
-        })
-        .catch((error) => {
-          document.getElementById("message").innerText = "Bir hata oluştu.";
-          console.error(error);
+      try {
+        // Loading mesajı göster
+        messageDiv.innerHTML = '<div class="loading">Rezervasyonunuz işleniyor...</div>';
+        
+        // API'ye istek gönder
+        const response = await fetch('/api/reservations', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json'
+          },
+          body: JSON.stringify(formData)
         });
+
+        const data = await response.json();
+
+        if (data.success) {
+          // Başarılı mesajı göster
+          messageDiv.innerHTML = `
+            <div class="success">
+              <h3>Rezervasyonunuz Başarıyla Oluşturuldu!</h3>
+              <p>Onay maili adresinize gönderildi.</p>
+            </div>
+          `;
+          // Formu sıfırla
+          form.reset();
+          updateTimeOptions(toDateInputFormat(today));
+        } else {
+          throw new Error(data.error || 'Bir hata oluştu');
+        }
+      } catch (error) {
+        // Hata mesajı göster
+        messageDiv.innerHTML = `
+          <div class="error">
+            <h3>Hata!</h3>
+            <p>${error.message}</p>
+          </div>
+        `;
+      }
     });
   }
 });
