@@ -1,3 +1,11 @@
+/* Gallery Page Styles */
+:root {
+  --gallery-gap: clamp(1rem, 2vw, 2rem);
+  --item-min-width: 300px;
+  --overlay-color: rgba(0, 0, 0, 0.7);
+  --transition-speed: 0.3s;
+}
+
 body {
   margin: 0;
   padding: 0;
@@ -5,16 +13,10 @@ body {
   font-family: sans-serif;
 }
 
-.site-header {
+.title {
+  color: var(--primary-color);
   text-align: center;
-  padding: 2rem 0;
-  color: #005f99;
-  background-color: #f1f1f1;
-}
-
-.logo {
-  width: 150px;
-  border-radius: 50%;
+  font-size: 2rem;
 }
 
 .container {
@@ -23,121 +25,317 @@ body {
   margin: auto;
 }
 
+/* Gallery Container */
 .gallery-container {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  padding: clamp(2rem, 5vw, 4rem) 0;
+}
+
+/* Gallery Filters */
+.gallery-filters {
+  display: flex;
+  justify-content: center;
   gap: 1rem;
-  padding: 2rem;
-  max-width: 1200px;
-  margin: auto;
+  margin-bottom: 2rem;
+  flex-wrap: wrap;
+}
+
+.filter-btn {
+  padding: 0.8rem 1.5rem;
+  border: 2px solid var(--primary-color);
+  background: transparent;
+  color: var(--primary-color);
+  border-radius: 30px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: all var(--transition-speed) ease;
+}
+
+.filter-btn:hover,
+.filter-btn.active {
+  background: var(--primary-color);
+  color: white;
+}
+
+/* Gallery Grid */
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1.5rem;
+  padding: 2rem 0;
 }
 
 .gallery-item {
-  width: 100%;
-  height: 200px;
-  object-fit: cover;
+  position: relative;
+  border-radius: 10px;
+  overflow: hidden;
+  aspect-ratio: 1;
   cursor: pointer;
-  border-radius: 8px;
-  transition: transform 0.3s;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
 }
 
 .gallery-item:hover {
-  transform: scale(1.02);
+  transform: translateY(-5px);
 }
 
-.lightbox {
-  display: none;
-  justify-content: center;
-  align-items: center;
-  position: fixed;
-  z-index: 999;
-  left: 0;
-  top: 0;
+.gallery-item img {
   width: 100%;
   height: 100%;
-  background: rgba(0, 0, 0, 0.8);
-  flex-direction: row;
-  padding: 1rem;
-  box-sizing: border-box;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.gallery-item:hover img {
+  transform: scale(1.1);
+}
+
+.gallery-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.4));
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 1.5rem;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.gallery-item:hover .gallery-overlay {
+  opacity: 1;
+}
+
+.gallery-overlay h3 {
+  color: white;
+  font-size: 1.4rem;
+  margin-bottom: 0.5rem;
+  transform: translateY(20px);
+  transition: transform 0.3s ease;
+}
+
+.gallery-overlay p {
+  color: rgba(255, 255, 255, 0.9);
+  font-size: 1rem;
+  transform: translateY(20px);
+  transition: transform 0.3s ease 0.1s;
+}
+
+.gallery-item:hover .gallery-overlay h3,
+.gallery-item:hover .gallery-overlay p {
+  transform: translateY(0);
+}
+
+/* Section Title */
+.section-title {
+  font-size: 2.5rem;
+  color: var(--primary-color);
+  text-align: center;
+  margin-top: 2rem;
+}
+
+/* Lightbox Styles */
+.lightbox {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.9);
+  z-index: 1000;
+  padding: 2rem;
 }
 
 .lightbox img {
   max-width: 90%;
-  max-height: 80%;
-  border-radius: 8px;
-  z-index: 1;
+  max-height: 90vh;
+  margin: auto;
+  display: block;
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+  border-radius: 4px;
 }
 
-.lightbox .close {
+.close {
   position: absolute;
-  top: 2rem;
+  top: 1rem;
   right: 2rem;
-  font-size: 2.5rem;
   color: white;
+  font-size: 2rem;
   cursor: pointer;
-  z-index: 2;
+  z-index: 1001;
 }
 
 .lightbox-prev,
 .lightbox-next {
   position: absolute;
   top: 50%;
-  font-size: 2.5rem;
+  transform: translateY(-50%);
+  background: rgba(255, 255, 255, 0.1);
   color: white;
-  background: none;
+  padding: 1rem;
   border: none;
   cursor: pointer;
-  z-index: 2;
-  transform: translateY(-50%);
+  font-size: 1.5rem;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+}
+
+.lightbox-prev:hover,
+.lightbox-next:hover {
+  background: rgba(255, 255, 255, 0.2);
 }
 
 .lightbox-prev {
-  left: 1rem;
+  left: 2rem;
 }
 
 .lightbox-next {
-  right: 1rem;
+  right: 2rem;
+}
+
+/* Responsive Design */
+@media (max-width: 992px) {
+  .gallery {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  /* Tablet ve orta boy ekranlar için overlay ayarları */
+  .gallery-overlay {
+    opacity: 1;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.5));
+  }
+
+  .gallery-overlay h3,
+  .gallery-overlay p {
+    transform: translateY(0);
+  }
+
+  .gallery-item:hover .gallery-overlay {
+    opacity: 1;
+  }
+
+  .gallery-item:hover img {
+    transform: none;
+  }
+}
+
+@media (max-width: 768px) {
+  .gallery-filters {
+    gap: 0.5rem;
+  }
+
+  .filter-btn {
+    padding: 0.6rem 1.2rem;
+    font-size: 0.9rem;
+  }
+
+  .lightbox-caption {
+    bottom: 1rem;
+    padding: 0.8rem;
+  }
+
+  .lightbox-prev,
+  .lightbox-next {
+    width: 40px;
+    height: 40px;
+    font-size: 1.5rem;
+  }
+
+  /* Tablet için overlay ayarları */
+  .gallery-overlay {
+    opacity: 1;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.5));
+  }
+
+  .gallery-overlay h3 {
+    font-size: 1.3rem;
+  }
+
+  .gallery-overlay p {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .gallery {
+    grid-template-columns: 1fr;
+  }
+
+  .gallery-item {
+    aspect-ratio: 3/4;
+  }
+
+  .gallery-overlay {
+    opacity: 1;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.5));
+  }
+
+  .gallery-overlay h3,
+  .gallery-overlay p {
+    transform: translateY(0);
+  }
+
+  .gallery-item:hover .gallery-overlay {
+    opacity: 1;
+  }
+
+  .gallery-item:hover img {
+    transform: none;
+  }
+
+  .gallery-overlay h3 {
+    font-size: 1.2rem;
+  }
+
+  .gallery-overlay p {
+    font-size: 0.9rem;
+  }
+
+  .lightbox {
+    padding: 1rem;
+  }
+
+  .lightbox-prev {
+    left: 1rem;
+  }
+
+  .lightbox-next {
+    right: 1rem;
+  }
+}
+
+/* Dark Mode Support */
+@media (prefers-color-scheme: dark) {
+  .filter-btn {
+    color: white;
+    border-color: white;
+  }
+
+  .filter-btn:hover,
+  .filter-btn.active {
+    background: white;
+    color: var(--primary-color);
+  }
+
+  .section-title {
+    color: var(--primary-color);
+  }
+
+  .gallery-item {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
 }
 
 /* =============================
    Responsive Grid Ayarları
 ============================= */
 
-@media (max-width: 992px) {
-  .gallery-container {
-    grid-template-columns: repeat(3, 1fr);
-  }
-}
-
-@media (max-width: 768px) {
-  .gallery-container {
-    grid-template-columns: repeat(2, 1fr);
-  }
-
-  .lightbox .close,
-  .lightbox-prev,
-  .lightbox-next {
-    font-size: 2rem;
-  }
-}
-
 @media (max-width: 480px) {
-  .gallery-container {
-    grid-template-columns: repeat(1, 1fr);
-  }
-
-  .gallery-item {
-    height: 180px;
-  }
-
-  .logo {
-    width: 100px;
-  }
-
-  .site-header h1 {
-    font-size: 1.5rem;
-  }
-
   .lightbox img {
     max-width: 95%;
     max-height: 70%;
@@ -148,4 +346,9 @@ body {
   .lightbox-next {
     font-size: 1.8rem;
   }
+}
+
+/* Lightbox içindeki overlay'i gizle - tüm ekran boyutları için */
+.lightbox .gallery-overlay {
+  display: none;
 }

@@ -3,45 +3,110 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Fotoğraf Galerisi</title>
-    <link rel="stylesheet" href="css/galeri.css" />
+    <title>Galeri - Ansal WindSurf</title>
+    <link rel="stylesheet" href="css/style.css" />
     <link rel="stylesheet" href="css/sidebar.css" />
+    <link rel="stylesheet" href="css/galeri.css" />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
       crossorigin="anonymous"
     />
   </head>
-  <body>
+  <body class="with-sidebar">
     <div id="sidebar-container"></div>
-    <header class="site-header">
-      <div class="container">
-        <img src="images/logo.jpg" class="logo" />
-        <h1>Ansal WindSurf</h1>
+
+    <main class="container">
+      <h2 class="title">Galerimiz</h2>
+
+      <div class="gallery">
+        <div class="gallery-item">
+          <img src="images/1.jpg" alt="WindSurf Deneyimi" />
+          <div class="gallery-overlay">
+            <h3>WindSurf Deneyimi</h3>
+            <p>Rüzgarla dans eden yelkenler</p>
+          </div>
+        </div>
+        <div class="gallery-item">
+          <img src="images/7.jpg" alt="Su Sporları Keyfi" />
+          <div class="gallery-overlay">
+            <h3>Su Sporları Keyfi</h3>
+            <p>Her seviyeye uygun eğlenceli aktiviteler</p>
+          </div>
+        </div>
+        <div class="gallery-item">
+          <img src="images/2.jpg" alt="SUP Keyfi" />
+          <div class="gallery-overlay">
+            <h3>Profesyonel Eğitim</h3>
+            <p>Uzman eğitmenlerle güvenli ve keyifli öğrenim</p>
+          </div>
+        </div>
+        <div class="gallery-item">
+          <img src="images/4.jpg" alt="Profesyonel Eğitim" />
+          <div class="gallery-overlay">
+            <h3>SUP Keyfi</h3>
+            <p>Sakin sularda huzurlu anlar, doğayla baş başa</p>
+          </div>
+        </div>
+        <div class="gallery-item">
+          <img src="images/5.jpg" alt="Grup Aktiviteleri" />
+          <div class="gallery-overlay">
+            <h3>Grup Aktiviteleri</h3>
+            <p>Arkadaşlarınızla unutulmaz deneyimler yaşayın</p>
+          </div>
+        </div>
+        <div class="gallery-item">
+          <img src="images/6.jpg" alt="Doğa ile Buluşma" />
+          <div class="gallery-overlay">
+            <h3>Doğa ile Buluşma</h3>
+            <p>Deniz ve güneşin buluştuğu nokta</p>
+          </div>
+        </div>
+        <div class="gallery-item">
+          <img src="images/3.jpg" alt="Kano Macerası" />
+          <div class="gallery-overlay">
+            <h3>Kano Macerası</h3>
+            <p>Özgürlüğün tadını çıkarın</p>
+          </div>
+        </div>
+
+        <div class="gallery-item">
+          <img src="images/8.jpg" alt="Yaz Kampı" />
+          <div class="gallery-overlay">
+            <h3>Yaz Kampı</h3>
+            <p>Çocuklar için güvenli ve eğlenceli su sporları</p>
+          </div>
+        </div>
+        <div class="gallery-item">
+          <img src="images/9.jpg" alt="Deniz Macerası" />
+          <div class="gallery-overlay">
+            <h3>Deniz Macerası</h3>
+            <p>Her yaşa uygun deniz aktiviteleri</p>
+          </div>
+        </div>
+        <div class="gallery-item">
+          <img src="images/10.jpg" alt="Akşam Sörfü" />
+          <div class="gallery-overlay">
+            <h3>Akşam Sörfü</h3>
+            <p>Gün batımında muhteşem sörf deneyimi</p>
+          </div>
+        </div>
+        <div class="gallery-item">
+          <img src="images/11.jpg" alt="Sahil Keyfi" />
+          <div class="gallery-overlay">
+            <h3>Sahil Keyfi</h3>
+            <p>Deniz, güneş ve spor bir arada</p>
+          </div>
+        </div>
       </div>
-    </header>
 
-    <div class="gallery-container">
-      <img src="images/1.jpg" alt="Fotoğraf 1" class="gallery-item" />
-      <img src="images/2.jpg" alt="Fotoğraf 2" class="gallery-item" />
-      <img src="images/3.jpg" alt="Fotoğraf 3" class="gallery-item" />
-      <img src="images/4.jpg" alt="Fotoğraf 4" class="gallery-item" />
-      <img src="images/5.jpg" alt="Fotoğraf 5" class="gallery-item" />
-      <img src="images/6.jpg" alt="Fotoğraf 6" class="gallery-item" />
-      <img src="images/7.jpg" alt="Fotoğraf 7" class="gallery-item" />
-      <img src="images/8.jpg" alt="Fotoğraf 8" class="gallery-item" />
-      <img src="images/9.jpg" alt="Fotoğraf 9" class="gallery-item" />
-      <img src="images/10.jpg" alt="Fotoğraf 10" class="gallery-item" />
-      <img src="images/11.jpg" alt="Fotoğraf 11" class="gallery-item" />
-    </div>
-
-    <!-- Lightbox -->
-    <div id="lightbox" class="lightbox">
-      <span class="close">&times;</span>
-      <button class="lightbox-prev">&#10094;</button>
-      <img id="lightbox-img" src="" alt="Büyük Görsel" />
-      <button class="lightbox-next">&#10095;</button>
-    </div>
+      <div id="lightbox" class="lightbox">
+        <span class="close">&times;</span>
+        <img id="lightbox-img" src="" alt="Büyük Resim" />
+        <button class="lightbox-prev">&lt;</button>
+        <button class="lightbox-next">&gt;</button>
+      </div>
+    </main>
 
     <script src="script.js"></script>
   </body>

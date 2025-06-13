@@ -4,63 +4,88 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Kano - Su Sporları Merkezi</title>
+    <title>Kano - Ansal WindSurf</title>
     <link rel="stylesheet" href="css/style.css" />
     <link rel="stylesheet" href="css/sidebar.css" />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
-      integrity="sha512-Avb2QiuDEEvB4bZJYdft2mNjVShBftLdPG8FJ0V7irTLQ8Uo0qcPxh4Plq7G5tGm0rU+1SPhVotteLpBERwTkw=="
       crossorigin="anonymous"
     />
   </head>
-  <body>
+  <body class="with-sidebar">
     <div id="sidebar-container"></div>
-    <header class="main-header">
-      <div class="container">
-        <img src="images/logo.jpg" class="logo" />
-        <h1>Ansal WindSurf</h1>
-      </div>
-    </header>
 
-    <main class="container">
-      <section class="branch-detail">
-        <div class="text">
-          <p class="kano-about">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae
-            dignissimos nemo minus earum voluptatem eveniet? Quis fugiat
-            mollitia dignissimos saepe? Quo blanditiis fugit repellat nobis. Eum
-            dolorum non sapiente debitis. Lorem ipsum dolor sit amet consectetur
-            adipisicing elit. Nulla ut illo, impedit perspiciatis quidem laborum
-            doloribus ad quas facilis mollitia sint nisi quibusdam eos quam
-            voluptatibus officiis dignissimos magnam. Adipisci.
-          </p>
-          <h2 class="title">Neler Sunuyoruz?</h2>
-          <p class="text-kano">
-            Kano turları, gölet ve denizlerde eğitimli eğitmenler eşliğinde
-            gerçekleştirilir. Tüm katılımcılara can yeleği ve ekipman sağlanır.
-            Turlar hem bireysel hem grup olarak yapılabilir.
-          </p>
+    <div class="main-content">
+      <main class="container">
+        <section class="activity-content">
+          <div class="activity-grid">
+            <div class="activity-info">
+              <h2 class="section-title">Kano Hakkında</h2>
+              <p class="activity-description">
+                Kano, sakin sularda yapılan, hem eğlenceli hem de fiziksel
+                olarak geliştirici bir su sporudur. Genellikle 1 veya 2 kişilik
+                hafif ve uzun tekneler kullanılır. Katılımcılar, tek taraflı
+                küreklerle suya paralel hareket ederek ilerler.
+              </p>
 
-          <h2 class="title">Kimler Katılabilir?</h2>
-          <p class="text-kano">
-            7 yaş ve üzeri herkes için uygundur. Yüzme bilme şartı aranmaktadır.
-          </p>
+              <div class="activity-features">
+                <div class="feature-card">
+                  <i class="fas fa-users feature-icon"></i>
+                  <h3>Kimler Katılabilir</h3>
+                  <p>7 yaş ve üzeri herkes için uygundur</p>
+                </div>
 
-          <!-- <h2>Günlük Program</h2>
-          <ul>
-            <li>09:00 - Tanışma ve brifing</li>
-            <li>09:30 - Ekipman tanıtımı</li>
-            <li>10:00 - Suya çıkış</li>
-            <li>12:00 - Geri dönüş ve değerlendirme</li>
-          </ul> -->
+                <div class="feature-card">
+                  <i class="fas fa-life-ring feature-icon"></i>
+                  <h3>Ekipmanlar</h3>
+                  <p>Kano (tekne), can yeleği, kürek</p>
+                </div>
 
-          <a href="rezervasyon.html?branş=kano" class="btn buttons"
-            >Rezervasyon Yap <i class="arrow">→</i></a
-          >
-        </div>
-      </section>
-    </main>
+                <div class="feature-card">
+                  <i class="fas fa-dumbbell feature-icon"></i>
+                  <h3>Faydaları</h3>
+                  <p>
+                    Kol ve sırt kaslarını geliştirir, doğayla iç içe vakit
+                    geçirmeyi sağlar.
+                  </p>
+                </div>
+              </div>
+
+              <div class="cta-container">
+                <a href="rezervasyon.html?branş=kano" class="cta-button">
+                  Rezervasyon Yap <i class="fas fa-arrow-right"></i>
+                </a>
+              </div>
+            </div>
+
+            <div class="activity-gallery">
+              <div class="gallery-grid">
+                <img
+                  src="images/kano1.jpg"
+                  alt="Kano Aktivitesi 1"
+                  class="gallery-img"
+                  loading="lazy"
+                />
+                <img
+                  src="images/kano2.jpg"
+                  alt="Kano Aktivitesi 2"
+                  class="gallery-img"
+                  loading="lazy"
+                />
+                <img
+                  src="images/kano3.jpg"
+                  alt="Kano Aktivitesi 3"
+                  class="gallery-img"
+                  loading="lazy"
+                />
+              </div>
+            </div>
+          </div>
+        </section>
+      </main>
+    </div>
+
     <script src="script.js"></script>
   </body>
 </html>

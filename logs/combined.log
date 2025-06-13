@@ -1,0 +1,553 @@
+2025-06-10T18:39:24: Email kullanıcısı: zynp11dgru@gmail.com
+2025-06-10T18:39:24: (node:18468) [MONGODB DRIVER] Warning: useNewUrlParser is a deprecated option: useNewUrlParser has no effect since Node.js Driver version 4.0.0 and will be removed in the next major version
+2025-06-10T18:39:24: (Use `node --trace-warnings ...` to show where the warning was created)
+2025-06-10T18:39:24: (node:18468) [MONGODB DRIVER] Warning: useUnifiedTopology is a deprecated option: useUnifiedTopology has no effect since Node.js Driver version 4.0.0 and will be removed in the next major version
+2025-06-10T18:39:24: Server 3000 portunda çalışıyor
+2025-06-10T18:39:24: SMTP Sunucu hazır
+2025-06-10T18:39:54: MongoDB bağlantı hatası: MongooseServerSelectionError: connect ECONNREFUSED ::1:27017, connect ECONNREFUSED 127.0.0.1:27017
+2025-06-10T18:39:54:     at _handleConnectionErrors (C:\Users\monster\Desktop\su-sporlari\node_modules\mongoose\lib\connection.js:1165:11)
+2025-06-10T18:39:54:     at NativeConnection.openUri (C:\Users\monster\Desktop\su-sporlari\node_modules\mongoose\lib\connection.js:1096:11) {
+2025-06-10T18:39:54:   errorLabelSet: Set(0) {},
+2025-06-10T18:39:54:   reason: TopologyDescription {
+2025-06-10T18:39:54:     type: 'Unknown',
+2025-06-10T18:39:54:     servers: Map(1) { 'localhost:27017' => [ServerDescription] },
+2025-06-10T18:39:54:     stale: false,
+2025-06-10T18:39:54:     compatible: true,
+2025-06-10T18:39:54:     heartbeatFrequencyMS: 10000,
+2025-06-10T18:39:54:     localThresholdMS: 15,
+2025-06-10T18:39:54:     setName: null,
+2025-06-10T18:39:54:     maxElectionId: null,
+2025-06-10T18:39:54:     maxSetVersion: null,
+2025-06-10T18:39:54:     commonWireVersion: 0,
+2025-06-10T18:39:54:     logicalSessionTimeoutMinutes: null
+2025-06-10T18:39:54:   },
+2025-06-10T18:39:54:   code: undefined,
+2025-06-10T18:39:54:   cause: TopologyDescription {
+2025-06-10T18:39:54:     type: 'Unknown',
+2025-06-10T18:39:54:     servers: Map(1) { 'localhost:27017' => [ServerDescription] },
+2025-06-10T18:39:54:     stale: false,
+2025-06-10T18:39:54:     compatible: true,
+2025-06-10T18:39:54:     heartbeatFrequencyMS: 10000,
+2025-06-10T18:39:54:     localThresholdMS: 15,
+2025-06-10T18:39:54:     setName: null,
+2025-06-10T18:39:54:     maxElectionId: null,
+2025-06-10T18:39:54:     maxSetVersion: null,
+2025-06-10T18:39:54:     commonWireVersion: 0,
+2025-06-10T18:39:54:     logicalSessionTimeoutMinutes: null
+2025-06-10T18:39:54:   }
+2025-06-10T18:39:54: }
+2025-06-10T18:41:13: Email kullanıcısı: zynp11dgru@gmail.com
+2025-06-10T18:41:13: (node:16936) [MONGODB DRIVER] Warning: useNewUrlParser is a deprecated option: useNewUrlParser has no effect since Node.js Driver version 4.0.0 and will be removed in the next major version
+2025-06-10T18:41:13: (Use `node --trace-warnings ...` to show where the warning was created)
+2025-06-10T18:41:13: (node:16936) [MONGODB DRIVER] Warning: useUnifiedTopology is a deprecated option: useUnifiedTopology has no effect since Node.js Driver version 4.0.0 and will be removed in the next major version
+2025-06-10T18:41:13: Server 3000 portunda çalışıyor
+2025-06-10T18:41:14: SMTP Sunucu hazır
+2025-06-10T18:41:15: Email kullanıcısı: zynp11dgru@gmail.com
+2025-06-10T18:41:15: (node:14264) [MONGODB DRIVER] Warning: useNewUrlParser is a deprecated option: useNewUrlParser has no effect since Node.js Driver version 4.0.0 and will be removed in the next major version
+2025-06-10T18:41:15: (Use `node --trace-warnings ...` to show where the warning was created)
+2025-06-10T18:41:15: (node:14264) [MONGODB DRIVER] Warning: useUnifiedTopology is a deprecated option: useUnifiedTopology has no effect since Node.js Driver version 4.0.0 and will be removed in the next major version
+2025-06-10T18:41:15: Server 3000 portunda çalışıyor
+2025-06-10T18:41:16: SMTP Sunucu hazır
+2025-06-10T18:41:41: Email kullanıcısı: zynp11dgru@gmail.com
+2025-06-10T18:41:41: (node:3116) [MONGODB DRIVER] Warning: useNewUrlParser is a deprecated option: useNewUrlParser has no effect since Node.js Driver version 4.0.0 and will be removed in the next major version
+2025-06-10T18:41:41: (Use `node --trace-warnings ...` to show where the warning was created)
+2025-06-10T18:41:41: (node:3116) [MONGODB DRIVER] Warning: useUnifiedTopology is a deprecated option: useUnifiedTopology has no effect since Node.js Driver version 4.0.0 and will be removed in the next major version
+2025-06-10T18:41:41: Server 3000 portunda çalışıyor
+2025-06-10T18:41:42: SMTP Sunucu hazır
+2025-06-10T18:42:11: MongoDB bağlantı hatası: MongooseServerSelectionError: connect ECONNREFUSED ::1:27017, connect ECONNREFUSED 127.0.0.1:27017
+2025-06-10T18:42:11:     at _handleConnectionErrors (C:\Users\monster\Desktop\su-sporlari\node_modules\mongoose\lib\connection.js:1165:11)
+2025-06-10T18:42:11:     at NativeConnection.openUri (C:\Users\monster\Desktop\su-sporlari\node_modules\mongoose\lib\connection.js:1096:11)
+2025-06-10T18:42:11:     at runNextTicks (node:internal/process/task_queues:60:5)
+2025-06-10T18:42:11:     at listOnTimeout (node:internal/timers:538:9)
+2025-06-10T18:42:11:     at process.processTimers (node:internal/timers:512:7) {
+2025-06-10T18:42:11:   errorLabelSet: Set(0) {},
+2025-06-10T18:42:11:   reason: TopologyDescription {
+2025-06-10T18:42:11:     type: 'Unknown',
+2025-06-10T18:42:11:     servers: Map(1) { 'localhost:27017' => [ServerDescription] },
+2025-06-10T18:42:11:     stale: false,
+2025-06-10T18:42:11:     compatible: true,
+2025-06-10T18:42:11:     heartbeatFrequencyMS: 10000,
+2025-06-10T18:42:11:     localThresholdMS: 15,
+2025-06-10T18:42:11:     setName: null,
+2025-06-10T18:42:11:     maxElectionId: null,
+2025-06-10T18:42:11:     maxSetVersion: null,
+2025-06-10T18:42:11:     commonWireVersion: 0,
+2025-06-10T18:42:11:     logicalSessionTimeoutMinutes: null
+2025-06-10T18:42:11:   },
+2025-06-10T18:42:11:   code: undefined,
+2025-06-10T18:42:11:   cause: TopologyDescription {
+2025-06-10T18:42:11:     type: 'Unknown',
+2025-06-10T18:42:11:     servers: Map(1) { 'localhost:27017' => [ServerDescription] },
+2025-06-10T18:42:11:     stale: false,
+2025-06-10T18:42:11:     compatible: true,
+2025-06-10T18:42:11:     heartbeatFrequencyMS: 10000,
+2025-06-10T18:42:11:     localThresholdMS: 15,
+2025-06-10T18:42:11:     setName: null,
+2025-06-10T18:42:11:     maxElectionId: null,
+2025-06-10T18:42:11:     maxSetVersion: null,
+2025-06-10T18:42:11:     commonWireVersion: 0,
+2025-06-10T18:42:11:     logicalSessionTimeoutMinutes: null
+2025-06-10T18:42:11:   }
+2025-06-10T18:42:11: }
+2025-06-10T18:44:41: Email kullanıcısı: zynp11dgru@gmail.com
+2025-06-10T18:44:41: (node:14596) [MONGODB DRIVER] Warning: useNewUrlParser is a deprecated option: useNewUrlParser has no effect since Node.js Driver version 4.0.0 and will be removed in the next major version
+2025-06-10T18:44:41: (Use `node --trace-warnings ...` to show where the warning was created)
+2025-06-10T18:44:41: (node:14596) [MONGODB DRIVER] Warning: useUnifiedTopology is a deprecated option: useUnifiedTopology has no effect since Node.js Driver version 4.0.0 and will be removed in the next major version
+2025-06-10T18:44:41: Server 3000 portunda çalışıyor
+2025-06-10T18:44:42: Email kullanıcısı: zynp11dgru@gmail.com
+2025-06-10T18:44:42: (node:8512) [MONGODB DRIVER] Warning: useNewUrlParser is a deprecated option: useNewUrlParser has no effect since Node.js Driver version 4.0.0 and will be removed in the next major version
+2025-06-10T18:44:42: (Use `node --trace-warnings ...` to show where the warning was created)
+2025-06-10T18:44:42: (node:8512) [MONGODB DRIVER] Warning: useUnifiedTopology is a deprecated option: useUnifiedTopology has no effect since Node.js Driver version 4.0.0 and will be removed in the next major version
+2025-06-10T18:44:42: Server 3000 portunda çalışıyor
+2025-06-10T18:44:42: SMTP Sunucu hazır
+2025-06-10T18:45:12: MongoDB bağlantı hatası: MongooseServerSelectionError: connect ECONNREFUSED ::1:27017, connect ECONNREFUSED 127.0.0.1:27017
+2025-06-10T18:45:12:     at _handleConnectionErrors (C:\Users\monster\Desktop\su-sporlari\node_modules\mongoose\lib\connection.js:1165:11)
+2025-06-10T18:45:12:     at NativeConnection.openUri (C:\Users\monster\Desktop\su-sporlari\node_modules\mongoose\lib\connection.js:1096:11)
+2025-06-10T18:45:12:     at runNextTicks (node:internal/process/task_queues:60:5)
+2025-06-10T18:45:12:     at listOnTimeout (node:internal/timers:538:9)
+2025-06-10T18:45:12:     at process.processTimers (node:internal/timers:512:7) {
+2025-06-10T18:45:12:   errorLabelSet: Set(0) {},
+2025-06-10T18:45:12:   reason: TopologyDescription {
+2025-06-10T18:45:12:     type: 'Unknown',
+2025-06-10T18:45:12:     servers: Map(1) { 'localhost:27017' => [ServerDescription] },
+2025-06-10T18:45:12:     stale: false,
+2025-06-10T18:45:12:     compatible: true,
+2025-06-10T18:45:12:     heartbeatFrequencyMS: 10000,
+2025-06-10T18:45:12:     localThresholdMS: 15,
+2025-06-10T18:45:12:     setName: null,
+2025-06-10T18:45:12:     maxElectionId: null,
+2025-06-10T18:45:12:     maxSetVersion: null,
+2025-06-10T18:45:12:     commonWireVersion: 0,
+2025-06-10T18:45:12:     logicalSessionTimeoutMinutes: null
+2025-06-10T18:45:12:   },
+2025-06-10T18:45:12:   code: undefined,
+2025-06-10T18:45:12:   cause: TopologyDescription {
+2025-06-10T18:45:12:     type: 'Unknown',
+2025-06-10T18:45:12:     servers: Map(1) { 'localhost:27017' => [ServerDescription] },
+2025-06-10T18:45:12:     stale: false,
+2025-06-10T18:45:12:     compatible: true,
+2025-06-10T18:45:12:     heartbeatFrequencyMS: 10000,
+2025-06-10T18:45:12:     localThresholdMS: 15,
+2025-06-10T18:45:12:     setName: null,
+2025-06-10T18:45:12:     maxElectionId: null,
+2025-06-10T18:45:12:     maxSetVersion: null,
+2025-06-10T18:45:12:     commonWireVersion: 0,
+2025-06-10T18:45:12:     logicalSessionTimeoutMinutes: null
+2025-06-10T18:45:12:   }
+2025-06-10T18:45:12: }
+2025-06-10T18:45:23: Email kullanıcısı: zynp11dgru@gmail.com
+2025-06-10T18:45:23: (node:16592) [MONGODB DRIVER] Warning: useNewUrlParser is a deprecated option: useNewUrlParser has no effect since Node.js Driver version 4.0.0 and will be removed in the next major version
+2025-06-10T18:45:23: (Use `node --trace-warnings ...` to show where the warning was created)
+2025-06-10T18:45:23: (node:16592) [MONGODB DRIVER] Warning: useUnifiedTopology is a deprecated option: useUnifiedTopology has no effect since Node.js Driver version 4.0.0 and will be removed in the next major version
+2025-06-10T18:45:23: Server 3000 portunda çalışıyor
+2025-06-10T18:45:24: SMTP Sunucu hazır
+2025-06-10T18:45:46: Email kullanıcısı: zynp11dgru@gmail.com
+2025-06-10T18:45:46: (node:9048) [MONGODB DRIVER] Warning: useNewUrlParser is a deprecated option: useNewUrlParser has no effect since Node.js Driver version 4.0.0 and will be removed in the next major version
+2025-06-10T18:45:46: (Use `node --trace-warnings ...` to show where the warning was created)
+2025-06-10T18:45:46: (node:9048) [MONGODB DRIVER] Warning: useUnifiedTopology is a deprecated option: useUnifiedTopology has no effect since Node.js Driver version 4.0.0 and will be removed in the next major version
+2025-06-10T18:45:46: Server 3000 portunda çalışıyor
+2025-06-10T18:45:47: SMTP Sunucu hazır
+2025-06-10T18:45:58: Email kullanıcısı: zynp11dgru@gmail.com
+2025-06-10T18:45:58: (node:6968) [MONGODB DRIVER] Warning: useNewUrlParser is a deprecated option: useNewUrlParser has no effect since Node.js Driver version 4.0.0 and will be removed in the next major version
+2025-06-10T18:45:58: (Use `node --trace-warnings ...` to show where the warning was created)
+2025-06-10T18:45:58: (node:6968) [MONGODB DRIVER] Warning: useUnifiedTopology is a deprecated option: useUnifiedTopology has no effect since Node.js Driver version 4.0.0 and will be removed in the next major version
+2025-06-10T18:45:58: Server 3000 portunda çalışıyor
+2025-06-10T18:45:58: SMTP Sunucu hazır
+2025-06-10T18:46:11: Email kullanıcısı: zynp11dgru@gmail.com
+2025-06-10T18:46:11: (node:7432) [MONGODB DRIVER] Warning: useNewUrlParser is a deprecated option: useNewUrlParser has no effect since Node.js Driver version 4.0.0 and will be removed in the next major version
+2025-06-10T18:46:11: (Use `node --trace-warnings ...` to show where the warning was created)
+2025-06-10T18:46:11: (node:7432) [MONGODB DRIVER] Warning: useUnifiedTopology is a deprecated option: useUnifiedTopology has no effect since Node.js Driver version 4.0.0 and will be removed in the next major version
+2025-06-10T18:46:11: Server 3000 portunda çalışıyor
+2025-06-10T18:46:12: SMTP Sunucu hazır
+2025-06-10T18:46:41: MongoDB bağlantı hatası: MongooseServerSelectionError: connect ECONNREFUSED ::1:27017, connect ECONNREFUSED 127.0.0.1:27017
+2025-06-10T18:46:41:     at _handleConnectionErrors (C:\Users\monster\Desktop\su-sporlari\node_modules\mongoose\lib\connection.js:1165:11)
+2025-06-10T18:46:41:     at NativeConnection.openUri (C:\Users\monster\Desktop\su-sporlari\node_modules\mongoose\lib\connection.js:1096:11) {
+2025-06-10T18:46:41:   errorLabelSet: Set(0) {},
+2025-06-10T18:46:41:   reason: TopologyDescription {
+2025-06-10T18:46:41:     type: 'Unknown',
+2025-06-10T18:46:41:     servers: Map(1) { 'localhost:27017' => [ServerDescription] },
+2025-06-10T18:46:41:     stale: false,
+2025-06-10T18:46:41:     compatible: true,
+2025-06-10T18:46:41:     heartbeatFrequencyMS: 10000,
+2025-06-10T18:46:41:     localThresholdMS: 15,
+2025-06-10T18:46:41:     setName: null,
+2025-06-10T18:46:41:     maxElectionId: null,
+2025-06-10T18:46:41:     maxSetVersion: null,
+2025-06-10T18:46:41:     commonWireVersion: 0,
+2025-06-10T18:46:41:     logicalSessionTimeoutMinutes: null
+2025-06-10T18:46:41:   },
+2025-06-10T18:46:41:   code: undefined,
+2025-06-10T18:46:41:   cause: TopologyDescription {
+2025-06-10T18:46:41:     type: 'Unknown',
+2025-06-10T18:46:41:     servers: Map(1) { 'localhost:27017' => [ServerDescription] },
+2025-06-10T18:46:41:     stale: false,
+2025-06-10T18:46:41:     compatible: true,
+2025-06-10T18:46:41:     heartbeatFrequencyMS: 10000,
+2025-06-10T18:46:41:     localThresholdMS: 15,
+2025-06-10T18:46:41:     setName: null,
+2025-06-10T18:46:41:     maxElectionId: null,
+2025-06-10T18:46:41:     maxSetVersion: null,
+2025-06-10T18:46:41:     commonWireVersion: 0,
+2025-06-10T18:46:41:     logicalSessionTimeoutMinutes: null
+2025-06-10T18:46:41:   }
+2025-06-10T18:46:41: }
+2025-06-10T18:50:34: Rezervasyon hatası: MongooseError: Operation `reservations.insertOne()` buffering timed out after 10000ms
+2025-06-10T18:50:34:     at Timeout.<anonymous> (C:\Users\monster\Desktop\su-sporlari\node_modules\mongoose\lib\drivers\node-mongodb-native\collection.js:187:23)
+2025-06-10T18:50:34:     at listOnTimeout (node:internal/timers:569:17)
+2025-06-10T18:50:34:     at process.processTimers (node:internal/timers:512:7)
+2025-06-10T18:50:42: Rezervasyon hatası: MongooseError: Operation `reservations.insertOne()` buffering timed out after 10000ms
+2025-06-10T18:50:42:     at Timeout.<anonymous> (C:\Users\monster\Desktop\su-sporlari\node_modules\mongoose\lib\drivers\node-mongodb-native\collection.js:187:23)
+2025-06-10T18:50:42:     at listOnTimeout (node:internal/timers:569:17)
+2025-06-10T18:50:42:     at process.processTimers (node:internal/timers:512:7)
+2025-06-10T18:51:05: Rezervasyon hatası: MongooseError: Operation `reservations.insertOne()` buffering timed out after 10000ms
+2025-06-10T18:51:05:     at Timeout.<anonymous> (C:\Users\monster\Desktop\su-sporlari\node_modules\mongoose\lib\drivers\node-mongodb-native\collection.js:187:23)
+2025-06-10T18:51:05:     at listOnTimeout (node:internal/timers:569:17)
+2025-06-10T18:51:05:     at process.processTimers (node:internal/timers:512:7)
+2025-06-10T18:51:10: Email kullanıcısı: zynp11dgru@gmail.com
+2025-06-10T18:51:10: (node:9200) [MONGODB DRIVER] Warning: useNewUrlParser is a deprecated option: useNewUrlParser has no effect since Node.js Driver version 4.0.0 and will be removed in the next major version
+2025-06-10T18:51:10: (Use `node --trace-warnings ...` to show where the warning was created)
+2025-06-10T18:51:10: (node:9200) [MONGODB DRIVER] Warning: useUnifiedTopology is a deprecated option: useUnifiedTopology has no effect since Node.js Driver version 4.0.0 and will be removed in the next major version
+2025-06-10T18:51:10: Server 3000 portunda çalışıyor
+2025-06-10T18:51:10: SMTP Sunucu hazır
+2025-06-10T18:51:40: MongoDB bağlantı hatası: MongooseServerSelectionError: connect ECONNREFUSED ::1:27017, connect ECONNREFUSED 127.0.0.1:27017
+2025-06-10T18:51:40:     at _handleConnectionErrors (C:\Users\monster\Desktop\su-sporlari\node_modules\mongoose\lib\connection.js:1165:11)
+2025-06-10T18:51:40:     at NativeConnection.openUri (C:\Users\monster\Desktop\su-sporlari\node_modules\mongoose\lib\connection.js:1096:11) {
+2025-06-10T18:51:40:   errorLabelSet: Set(0) {},
+2025-06-10T18:51:40:   reason: TopologyDescription {
+2025-06-10T18:51:40:     type: 'Unknown',
+2025-06-10T18:51:40:     servers: Map(1) { 'localhost:27017' => [ServerDescription] },
+2025-06-10T18:51:40:     stale: false,
+2025-06-10T18:51:40:     compatible: true,
+2025-06-10T18:51:40:     heartbeatFrequencyMS: 10000,
+2025-06-10T18:51:40:     localThresholdMS: 15,
+2025-06-10T18:51:40:     setName: null,
+2025-06-10T18:51:40:     maxElectionId: null,
+2025-06-10T18:51:40:     maxSetVersion: null,
+2025-06-10T18:51:40:     commonWireVersion: 0,
+2025-06-10T18:51:40:     logicalSessionTimeoutMinutes: null
+2025-06-10T18:51:40:   },
+2025-06-10T18:51:40:   code: undefined,
+2025-06-10T18:51:40:   cause: TopologyDescription {
+2025-06-10T18:51:40:     type: 'Unknown',
+2025-06-10T18:51:40:     servers: Map(1) { 'localhost:27017' => [ServerDescription] },
+2025-06-10T18:51:40:     stale: false,
+2025-06-10T18:51:40:     compatible: true,
+2025-06-10T18:51:40:     heartbeatFrequencyMS: 10000,
+2025-06-10T18:51:40:     localThresholdMS: 15,
+2025-06-10T18:51:40:     setName: null,
+2025-06-10T18:51:40:     maxElectionId: null,
+2025-06-10T18:51:40:     maxSetVersion: null,
+2025-06-10T18:51:40:     commonWireVersion: 0,
+2025-06-10T18:51:40:     logicalSessionTimeoutMinutes: null
+2025-06-10T18:51:40:   }
+2025-06-10T18:51:40: }
+2025-06-10T18:52:32: Rezervasyon hatası: MongooseError: Operation `reservations.insertOne()` buffering timed out after 10000ms
+2025-06-10T18:52:32:     at Timeout.<anonymous> (C:\Users\monster\Desktop\su-sporlari\node_modules\mongoose\lib\drivers\node-mongodb-native\collection.js:187:23)
+2025-06-10T18:52:32:     at listOnTimeout (node:internal/timers:569:17)
+2025-06-10T18:52:32:     at process.processTimers (node:internal/timers:512:7)
+2025-06-10T18:54:11: Email kullanıcısı: zynp11dgru@gmail.com
+2025-06-10T18:54:11: (node:1808) [MONGODB DRIVER] Warning: useNewUrlParser is a deprecated option: useNewUrlParser has no effect since Node.js Driver version 4.0.0 and will be removed in the next major version
+2025-06-10T18:54:11: (Use `node --trace-warnings ...` to show where the warning was created)
+2025-06-10T18:54:11: (node:1808) [MONGODB DRIVER] Warning: useUnifiedTopology is a deprecated option: useUnifiedTopology has no effect since Node.js Driver version 4.0.0 and will be removed in the next major version
+2025-06-10T18:54:11: Server 3000 portunda çalışıyor
+2025-06-10T18:54:12: SMTP Sunucu hazır
+2025-06-10T18:54:41: MongoDB bağlantı hatası: MongooseServerSelectionError: connect ECONNREFUSED ::1:27017, connect ECONNREFUSED 127.0.0.1:27017
+2025-06-10T18:54:41:     at _handleConnectionErrors (C:\Users\monster\Desktop\su-sporlari\node_modules\mongoose\lib\connection.js:1165:11)
+2025-06-10T18:54:41:     at NativeConnection.openUri (C:\Users\monster\Desktop\su-sporlari\node_modules\mongoose\lib\connection.js:1096:11) {
+2025-06-10T18:54:41:   errorLabelSet: Set(0) {},
+2025-06-10T18:54:41:   reason: TopologyDescription {
+2025-06-10T18:54:41:     type: 'Unknown',
+2025-06-10T18:54:41:     servers: Map(1) { 'localhost:27017' => [ServerDescription] },
+2025-06-10T18:54:41:     stale: false,
+2025-06-10T18:54:41:     compatible: true,
+2025-06-10T18:54:41:     heartbeatFrequencyMS: 10000,
+2025-06-10T18:54:41:     localThresholdMS: 15,
+2025-06-10T18:54:41:     setName: null,
+2025-06-10T18:54:41:     maxElectionId: null,
+2025-06-10T18:54:41:     maxSetVersion: null,
+2025-06-10T18:54:41:     commonWireVersion: 0,
+2025-06-10T18:54:41:     logicalSessionTimeoutMinutes: null
+2025-06-10T18:54:41:   },
+2025-06-10T18:54:41:   code: undefined,
+2025-06-10T18:54:41:   cause: TopologyDescription {
+2025-06-10T18:54:41:     type: 'Unknown',
+2025-06-10T18:54:41:     servers: Map(1) { 'localhost:27017' => [ServerDescription] },
+2025-06-10T18:54:41:     stale: false,
+2025-06-10T18:54:41:     compatible: true,
+2025-06-10T18:54:41:     heartbeatFrequencyMS: 10000,
+2025-06-10T18:54:41:     localThresholdMS: 15,
+2025-06-10T18:54:41:     setName: null,
+2025-06-10T18:54:41:     maxElectionId: null,
+2025-06-10T18:54:41:     maxSetVersion: null,
+2025-06-10T18:54:41:     commonWireVersion: 0,
+2025-06-10T18:54:41:     logicalSessionTimeoutMinutes: null
+2025-06-10T18:54:41:   }
+2025-06-10T18:54:41: }
+2025-06-10T18:57:12: Email kullanıcısı: zynp11dgru@gmail.com
+2025-06-10T18:57:12: (node:5180) [MONGODB DRIVER] Warning: useNewUrlParser is a deprecated option: useNewUrlParser has no effect since Node.js Driver version 4.0.0 and will be removed in the next major version
+2025-06-10T18:57:12: (Use `node --trace-warnings ...` to show where the warning was created)
+2025-06-10T18:57:12: (node:5180) [MONGODB DRIVER] Warning: useUnifiedTopology is a deprecated option: useUnifiedTopology has no effect since Node.js Driver version 4.0.0 and will be removed in the next major version
+2025-06-10T18:57:12: Server 3000 portunda çalışıyor
+2025-06-10T18:57:13: SMTP Sunucu hazır
+2025-06-10T18:57:42: MongoDB bağlantı hatası: MongooseServerSelectionError: connect ECONNREFUSED ::1:27017, connect ECONNREFUSED 127.0.0.1:27017
+2025-06-10T18:57:42:     at _handleConnectionErrors (C:\Users\monster\Desktop\su-sporlari\node_modules\mongoose\lib\connection.js:1165:11)
+2025-06-10T18:57:42:     at NativeConnection.openUri (C:\Users\monster\Desktop\su-sporlari\node_modules\mongoose\lib\connection.js:1096:11) {
+2025-06-10T18:57:42:   errorLabelSet: Set(0) {},
+2025-06-10T18:57:42:   reason: TopologyDescription {
+2025-06-10T18:57:42:     type: 'Unknown',
+2025-06-10T18:57:42:     servers: Map(1) { 'localhost:27017' => [ServerDescription] },
+2025-06-10T18:57:42:     stale: false,
+2025-06-10T18:57:42:     compatible: true,
+2025-06-10T18:57:42:     heartbeatFrequencyMS: 10000,
+2025-06-10T18:57:42:     localThresholdMS: 15,
+2025-06-10T18:57:42:     setName: null,
+2025-06-10T18:57:42:     maxElectionId: null,
+2025-06-10T18:57:42:     maxSetVersion: null,
+2025-06-10T18:57:42:     commonWireVersion: 0,
+2025-06-10T18:57:42:     logicalSessionTimeoutMinutes: null
+2025-06-10T18:57:42:   },
+2025-06-10T18:57:42:   code: undefined,
+2025-06-10T18:57:42:   cause: TopologyDescription {
+2025-06-10T18:57:42:     type: 'Unknown',
+2025-06-10T18:57:42:     servers: Map(1) { 'localhost:27017' => [ServerDescription] },
+2025-06-10T18:57:42:     stale: false,
+2025-06-10T18:57:42:     compatible: true,
+2025-06-10T18:57:42:     heartbeatFrequencyMS: 10000,
+2025-06-10T18:57:42:     localThresholdMS: 15,
+2025-06-10T18:57:42:     setName: null,
+2025-06-10T18:57:42:     maxElectionId: null,
+2025-06-10T18:57:42:     maxSetVersion: null,
+2025-06-10T18:57:42:     commonWireVersion: 0,
+2025-06-10T18:57:42:     logicalSessionTimeoutMinutes: null
+2025-06-10T18:57:42:   }
+2025-06-10T18:57:42: }
+2025-06-10T19:00:13: Email kullanıcısı: zynp11dgru@gmail.com
+2025-06-10T19:00:13: (node:21332) [MONGODB DRIVER] Warning: useNewUrlParser is a deprecated option: useNewUrlParser has no effect since Node.js Driver version 4.0.0 and will be removed in the next major version
+2025-06-10T19:00:13: (Use `node --trace-warnings ...` to show where the warning was created)
+2025-06-10T19:00:13: Server 3000 portunda çalışıyor
+2025-06-10T19:00:13: (node:21332) [MONGODB DRIVER] Warning: useUnifiedTopology is a deprecated option: useUnifiedTopology has no effect since Node.js Driver version 4.0.0 and will be removed in the next major version
+2025-06-10T19:00:14: SMTP Sunucu hazır
+2025-06-10T19:00:43: MongoDB bağlantı hatası: MongooseServerSelectionError: connect ECONNREFUSED ::1:27017, connect ECONNREFUSED 127.0.0.1:27017
+2025-06-10T19:00:43:     at _handleConnectionErrors (C:\Users\monster\Desktop\su-sporlari\node_modules\mongoose\lib\connection.js:1165:11)
+2025-06-10T19:00:43:     at NativeConnection.openUri (C:\Users\monster\Desktop\su-sporlari\node_modules\mongoose\lib\connection.js:1096:11) {
+2025-06-10T19:00:43:   errorLabelSet: Set(0) {},
+2025-06-10T19:00:43:   reason: TopologyDescription {
+2025-06-10T19:00:43:     type: 'Unknown',
+2025-06-10T19:00:43:     servers: Map(1) { 'localhost:27017' => [ServerDescription] },
+2025-06-10T19:00:43:     stale: false,
+2025-06-10T19:00:43:     compatible: true,
+2025-06-10T19:00:43:     heartbeatFrequencyMS: 10000,
+2025-06-10T19:00:43:     localThresholdMS: 15,
+2025-06-10T19:00:43:     setName: null,
+2025-06-10T19:00:43:     maxElectionId: null,
+2025-06-10T19:00:43:     maxSetVersion: null,
+2025-06-10T19:00:43:     commonWireVersion: 0,
+2025-06-10T19:00:43:     logicalSessionTimeoutMinutes: null
+2025-06-10T19:00:43:   },
+2025-06-10T19:00:43:   code: undefined,
+2025-06-10T19:00:43:   cause: TopologyDescription {
+2025-06-10T19:00:43:     type: 'Unknown',
+2025-06-10T19:00:43:     servers: Map(1) { 'localhost:27017' => [ServerDescription] },
+2025-06-10T19:00:43:     stale: false,
+2025-06-10T19:00:43:     compatible: true,
+2025-06-10T19:00:43:     heartbeatFrequencyMS: 10000,
+2025-06-10T19:00:43:     localThresholdMS: 15,
+2025-06-10T19:00:43:     setName: null,
+2025-06-10T19:00:43:     maxElectionId: null,
+2025-06-10T19:00:43:     maxSetVersion: null,
+2025-06-10T19:00:43:     commonWireVersion: 0,
+2025-06-10T19:00:43:     logicalSessionTimeoutMinutes: null
+2025-06-10T19:00:43:   }
+2025-06-10T19:00:43: }
+2025-06-10T19:03:14: Email kullanıcısı: zynp11dgru@gmail.com
+2025-06-10T19:03:14: (node:14756) [MONGODB DRIVER] Warning: useNewUrlParser is a deprecated option: useNewUrlParser has no effect since Node.js Driver version 4.0.0 and will be removed in the next major version
+2025-06-10T19:03:14: (Use `node --trace-warnings ...` to show where the warning was created)
+2025-06-10T19:03:14: (node:14756) [MONGODB DRIVER] Warning: useUnifiedTopology is a deprecated option: useUnifiedTopology has no effect since Node.js Driver version 4.0.0 and will be removed in the next major version
+2025-06-10T19:03:14: Server 3000 portunda çalışıyor
+2025-06-10T19:03:15: SMTP Sunucu hazır
+2025-06-10T19:03:44: MongoDB bağlantı hatası: MongooseServerSelectionError: connect ECONNREFUSED ::1:27017, connect ECONNREFUSED 127.0.0.1:27017
+2025-06-10T19:03:44:     at _handleConnectionErrors (C:\Users\monster\Desktop\su-sporlari\node_modules\mongoose\lib\connection.js:1165:11)
+2025-06-10T19:03:44:     at NativeConnection.openUri (C:\Users\monster\Desktop\su-sporlari\node_modules\mongoose\lib\connection.js:1096:11) {
+2025-06-10T19:03:44:   errorLabelSet: Set(0) {},
+2025-06-10T19:03:44:   reason: TopologyDescription {
+2025-06-10T19:03:44:     type: 'Unknown',
+2025-06-10T19:03:44:     servers: Map(1) { 'localhost:27017' => [ServerDescription] },
+2025-06-10T19:03:44:     stale: false,
+2025-06-10T19:03:44:     compatible: true,
+2025-06-10T19:03:44:     heartbeatFrequencyMS: 10000,
+2025-06-10T19:03:44:     localThresholdMS: 15,
+2025-06-10T19:03:44:     setName: null,
+2025-06-10T19:03:44:     maxElectionId: null,
+2025-06-10T19:03:44:     maxSetVersion: null,
+2025-06-10T19:03:44:     commonWireVersion: 0,
+2025-06-10T19:03:44:     logicalSessionTimeoutMinutes: null
+2025-06-10T19:03:44:   },
+2025-06-10T19:03:44:   code: undefined,
+2025-06-10T19:03:44:   cause: TopologyDescription {
+2025-06-10T19:03:44:     type: 'Unknown',
+2025-06-10T19:03:44:     servers: Map(1) { 'localhost:27017' => [ServerDescription] },
+2025-06-10T19:03:44:     stale: false,
+2025-06-10T19:03:44:     compatible: true,
+2025-06-10T19:03:44:     heartbeatFrequencyMS: 10000,
+2025-06-10T19:03:44:     localThresholdMS: 15,
+2025-06-10T19:03:44:     setName: null,
+2025-06-10T19:03:44:     maxElectionId: null,
+2025-06-10T19:03:44:     maxSetVersion: null,
+2025-06-10T19:03:44:     commonWireVersion: 0,
+2025-06-10T19:03:44:     logicalSessionTimeoutMinutes: null
+2025-06-10T19:03:44:   }
+2025-06-10T19:03:44: }
+2025-06-10T19:06:14: Email kullanıcısı: zynp11dgru@gmail.com
+2025-06-10T19:06:14: Server 3000 portunda çalışıyor
+2025-06-10T19:06:14: (node:11240) [MONGODB DRIVER] Warning: useNewUrlParser is a deprecated option: useNewUrlParser has no effect since Node.js Driver version 4.0.0 and will be removed in the next major version
+2025-06-10T19:06:14: (Use `node --trace-warnings ...` to show where the warning was created)
+2025-06-10T19:06:14: (node:11240) [MONGODB DRIVER] Warning: useUnifiedTopology is a deprecated option: useUnifiedTopology has no effect since Node.js Driver version 4.0.0 and will be removed in the next major version
+2025-06-10T19:06:16: Email kullanıcısı: zynp11dgru@gmail.com
+2025-06-10T19:06:16: (node:6068) [MONGODB DRIVER] Warning: useNewUrlParser is a deprecated option: useNewUrlParser has no effect since Node.js Driver version 4.0.0 and will be removed in the next major version
+2025-06-10T19:06:16: (Use `node --trace-warnings ...` to show where the warning was created)
+2025-06-10T19:06:16: (node:6068) [MONGODB DRIVER] Warning: useUnifiedTopology is a deprecated option: useUnifiedTopology has no effect since Node.js Driver version 4.0.0 and will be removed in the next major version
+2025-06-10T19:06:16: Server 3000 portunda çalışıyor
+2025-06-10T19:06:17: SMTP Sunucu hazır
+2025-06-10T19:06:46: MongoDB bağlantı hatası: MongooseServerSelectionError: connect ECONNREFUSED ::1:27017, connect ECONNREFUSED 127.0.0.1:27017
+2025-06-10T19:06:46:     at _handleConnectionErrors (C:\Users\monster\Desktop\su-sporlari\node_modules\mongoose\lib\connection.js:1165:11)
+2025-06-10T19:06:46:     at NativeConnection.openUri (C:\Users\monster\Desktop\su-sporlari\node_modules\mongoose\lib\connection.js:1096:11) {
+2025-06-10T19:06:46:   errorLabelSet: Set(0) {},
+2025-06-10T19:06:46:   reason: TopologyDescription {
+2025-06-10T19:06:46:     type: 'Unknown',
+2025-06-10T19:06:46:     servers: Map(1) { 'localhost:27017' => [ServerDescription] },
+2025-06-10T19:06:46:     stale: false,
+2025-06-10T19:06:46:     compatible: true,
+2025-06-10T19:06:46:     heartbeatFrequencyMS: 10000,
+2025-06-10T19:06:46:     localThresholdMS: 15,
+2025-06-10T19:06:46:     setName: null,
+2025-06-10T19:06:46:     maxElectionId: null,
+2025-06-10T19:06:46:     maxSetVersion: null,
+2025-06-10T19:06:46:     commonWireVersion: 0,
+2025-06-10T19:06:46:     logicalSessionTimeoutMinutes: null
+2025-06-10T19:06:46:   },
+2025-06-10T19:06:46:   code: undefined,
+2025-06-10T19:06:46:   cause: TopologyDescription {
+2025-06-10T19:06:46:     type: 'Unknown',
+2025-06-10T19:06:46:     servers: Map(1) { 'localhost:27017' => [ServerDescription] },
+2025-06-10T19:06:46:     stale: false,
+2025-06-10T19:06:46:     compatible: true,
+2025-06-10T19:06:46:     heartbeatFrequencyMS: 10000,
+2025-06-10T19:06:46:     localThresholdMS: 15,
+2025-06-10T19:06:46:     setName: null,
+2025-06-10T19:06:46:     maxElectionId: null,
+2025-06-10T19:06:46:     maxSetVersion: null,
+2025-06-10T19:06:46:     commonWireVersion: 0,
+2025-06-10T19:06:46:     logicalSessionTimeoutMinutes: null
+2025-06-10T19:06:46:   }
+2025-06-10T19:06:46: }
+2025-06-10T19:09:16: Email kullanıcısı: zynp11dgru@gmail.com
+2025-06-10T19:09:16: (node:10880) [MONGODB DRIVER] Warning: useNewUrlParser is a deprecated option: useNewUrlParser has no effect since Node.js Driver version 4.0.0 and will be removed in the next major version
+2025-06-10T19:09:16: (Use `node --trace-warnings ...` to show where the warning was created)
+2025-06-10T19:09:16: Server 3000 portunda çalışıyor
+2025-06-10T19:09:16: (node:10880) [MONGODB DRIVER] Warning: useUnifiedTopology is a deprecated option: useUnifiedTopology has no effect since Node.js Driver version 4.0.0 and will be removed in the next major version
+2025-06-10T19:09:17: SMTP Sunucu hazır
+2025-06-10T19:09:46: MongoDB bağlantı hatası: MongooseServerSelectionError: connect ECONNREFUSED ::1:27017, connect ECONNREFUSED 127.0.0.1:27017
+2025-06-10T19:09:46:     at _handleConnectionErrors (C:\Users\monster\Desktop\su-sporlari\node_modules\mongoose\lib\connection.js:1165:11)
+2025-06-10T19:09:46:     at NativeConnection.openUri (C:\Users\monster\Desktop\su-sporlari\node_modules\mongoose\lib\connection.js:1096:11) {
+2025-06-10T19:09:46:   errorLabelSet: Set(0) {},
+2025-06-10T19:09:46:   reason: TopologyDescription {
+2025-06-10T19:09:46:     type: 'Unknown',
+2025-06-10T19:09:46:     servers: Map(1) { 'localhost:27017' => [ServerDescription] },
+2025-06-10T19:09:46:     stale: false,
+2025-06-10T19:09:46:     compatible: true,
+2025-06-10T19:09:46:     heartbeatFrequencyMS: 10000,
+2025-06-10T19:09:46:     localThresholdMS: 15,
+2025-06-10T19:09:46:     setName: null,
+2025-06-10T19:09:46:     maxElectionId: null,
+2025-06-10T19:09:46:     maxSetVersion: null,
+2025-06-10T19:09:46:     commonWireVersion: 0,
+2025-06-10T19:09:46:     logicalSessionTimeoutMinutes: null
+2025-06-10T19:09:46:   },
+2025-06-10T19:09:46:   code: undefined,
+2025-06-10T19:09:46:   cause: TopologyDescription {
+2025-06-10T19:09:46:     type: 'Unknown',
+2025-06-10T19:09:46:     servers: Map(1) { 'localhost:27017' => [ServerDescription] },
+2025-06-10T19:09:46:     stale: false,
+2025-06-10T19:09:46:     compatible: true,
+2025-06-10T19:09:46:     heartbeatFrequencyMS: 10000,
+2025-06-10T19:09:46:     localThresholdMS: 15,
+2025-06-10T19:09:46:     setName: null,
+2025-06-10T19:09:46:     maxElectionId: null,
+2025-06-10T19:09:46:     maxSetVersion: null,
+2025-06-10T19:09:46:     commonWireVersion: 0,
+2025-06-10T19:09:46:     logicalSessionTimeoutMinutes: null
+2025-06-10T19:09:46:   }
+2025-06-10T19:09:46: }
+2025-06-10T19:15:02: Email kullanıcısı: zynp11dgru@gmail.com
+2025-06-10T19:15:02: (node:16428) [MONGODB DRIVER] Warning: useNewUrlParser is a deprecated option: useNewUrlParser has no effect since Node.js Driver version 4.0.0 and will be removed in the next major version
+2025-06-10T19:15:02: (Use `node --trace-warnings ...` to show where the warning was created)
+2025-06-10T19:15:02: (node:16428) [MONGODB DRIVER] Warning: useUnifiedTopology is a deprecated option: useUnifiedTopology has no effect since Node.js Driver version 4.0.0 and will be removed in the next major version
+2025-06-10T19:15:02: Server 3000 portunda çalışıyor
+2025-06-10T19:15:02: MongoDB bağlantısı başarılı
+2025-06-10T19:15:03: SMTP Sunucu hazır
+2025-06-10T19:18:02: Email kullanıcısı: zynp11dgru@gmail.com
+2025-06-10T19:18:02: (node:5548) [MONGODB DRIVER] Warning: useNewUrlParser is a deprecated option: useNewUrlParser has no effect since Node.js Driver version 4.0.0 and will be removed in the next major version
+2025-06-10T19:18:02: (Use `node --trace-warnings ...` to show where the warning was created)
+2025-06-10T19:18:02: (node:5548) [MONGODB DRIVER] Warning: useUnifiedTopology is a deprecated option: useUnifiedTopology has no effect since Node.js Driver version 4.0.0 and will be removed in the next major version
+2025-06-10T19:18:02: Server 3000 portunda çalışıyor
+2025-06-10T19:18:02: MongoDB bağlantısı başarılı
+2025-06-10T19:18:03: SMTP Sunucu hazır
+2025-06-10T19:21:27: Email kullanıcısı: zynp11dgru@gmail.com
+2025-06-10T19:21:27: (node:14288) [MONGODB DRIVER] Warning: useNewUrlParser is a deprecated option: useNewUrlParser has no effect since Node.js Driver version 4.0.0 and will be removed in the next major version
+2025-06-10T19:21:27: (Use `node --trace-warnings ...` to show where the warning was created)
+2025-06-10T19:21:27: (node:14288) [MONGODB DRIVER] Warning: useUnifiedTopology is a deprecated option: useUnifiedTopology has no effect since Node.js Driver version 4.0.0 and will be removed in the next major version
+2025-06-10T19:21:27: Server 3000 portunda çalışıyor
+2025-06-10T19:21:27: MongoDB bağlantısı başarılı
+2025-06-10T19:21:28: Email kullanıcısı: zynp11dgru@gmail.com
+2025-06-10T19:21:28: (node:21012) [MONGODB DRIVER] Warning: useNewUrlParser is a deprecated option: useNewUrlParser has no effect since Node.js Driver version 4.0.0 and will be removed in the next major version
+2025-06-10T19:21:28: (Use `node --trace-warnings ...` to show where the warning was created)
+2025-06-10T19:21:28: Server 3000 portunda çalışıyor
+2025-06-10T19:21:28: (node:21012) [MONGODB DRIVER] Warning: useUnifiedTopology is a deprecated option: useUnifiedTopology has no effect since Node.js Driver version 4.0.0 and will be removed in the next major version
+2025-06-10T19:21:28: MongoDB bağlantısı başarılı
+2025-06-10T19:21:29: SMTP Sunucu hazır
+2025-06-10T19:21:55: Email kullanıcısı: zynp11dgru@gmail.com
+2025-06-10T19:21:55: (node:17344) [MONGODB DRIVER] Warning: useNewUrlParser is a deprecated option: useNewUrlParser has no effect since Node.js Driver version 4.0.0 and will be removed in the next major version
+2025-06-10T19:21:55: (Use `node --trace-warnings ...` to show where the warning was created)
+2025-06-10T19:21:55: (node:17344) [MONGODB DRIVER] Warning: useUnifiedTopology is a deprecated option: useUnifiedTopology has no effect since Node.js Driver version 4.0.0 and will be removed in the next major version
+2025-06-10T19:21:55: Server 3000 portunda çalışıyor
+2025-06-10T19:21:55: MongoDB bağlantısı başarılı
+2025-06-10T19:21:56: Email kullanıcısı: zynp11dgru@gmail.com
+2025-06-10T19:21:56: (node:21148) [MONGODB DRIVER] Warning: useNewUrlParser is a deprecated option: useNewUrlParser has no effect since Node.js Driver version 4.0.0 and will be removed in the next major version
+2025-06-10T19:21:56: (Use `node --trace-warnings ...` to show where the warning was created)
+2025-06-10T19:21:56: (node:21148) [MONGODB DRIVER] Warning: useUnifiedTopology is a deprecated option: useUnifiedTopology has no effect since Node.js Driver version 4.0.0 and will be removed in the next major version
+2025-06-10T19:21:56: Server 3000 portunda çalışıyor
+2025-06-10T19:21:56: MongoDB bağlantısı başarılı
+2025-06-10T19:21:58: SMTP Sunucu hazır
+2025-06-10T19:25:05: Email kullanıcısı: zynp11dgru@gmail.com
+2025-06-10T19:25:05: (node:5320) [MONGODB DRIVER] Warning: useNewUrlParser is a deprecated option: useNewUrlParser has no effect since Node.js Driver version 4.0.0 and will be removed in the next major version
+2025-06-10T19:25:05: (Use `node --trace-warnings ...` to show where the warning was created)
+2025-06-10T19:25:05: (node:5320) [MONGODB DRIVER] Warning: useUnifiedTopology is a deprecated option: useUnifiedTopology has no effect since Node.js Driver version 4.0.0 and will be removed in the next major version
+2025-06-10T19:25:05: Server 3000 portunda çalışıyor
+2025-06-10T19:25:05: MongoDB bağlantısı başarılı
+2025-06-10T19:25:06: Email kullanıcısı: zynp11dgru@gmail.com
+2025-06-10T19:25:06: (node:17952) [MONGODB DRIVER] Warning: useNewUrlParser is a deprecated option: useNewUrlParser has no effect since Node.js Driver version 4.0.0 and will be removed in the next major version
+2025-06-10T19:25:06: (Use `node --trace-warnings ...` to show where the warning was created)
+2025-06-10T19:25:06: (node:17952) [MONGODB DRIVER] Warning: useUnifiedTopology is a deprecated option: useUnifiedTopology has no effect since Node.js Driver version 4.0.0 and will be removed in the next major version
+2025-06-10T19:25:06: Server 3000 portunda çalışıyor
+2025-06-10T19:25:06: MongoDB bağlantısı başarılı
+2025-06-10T19:25:07: SMTP Sunucu hazır
+2025-06-10T19:27:35: Email kullanıcısı: zynp11dgru@gmail.com
+2025-06-10T19:27:35: (node:17128) [MONGODB DRIVER] Warning: useNewUrlParser is a deprecated option: useNewUrlParser has no effect since Node.js Driver version 4.0.0 and will be removed in the next major version
+2025-06-10T19:27:35: (Use `node --trace-warnings ...` to show where the warning was created)
+2025-06-10T19:27:35: (node:17128) [MONGODB DRIVER] Warning: useUnifiedTopology is a deprecated option: useUnifiedTopology has no effect since Node.js Driver version 4.0.0 and will be removed in the next major version
+2025-06-10T19:27:35: Server 3000 portunda çalışıyor
+2025-06-10T19:27:35: MongoDB bağlantısı başarılı
+2025-06-10T19:27:38: SMTP Sunucu hazır
+2025-06-10T19:29:38: Email kullanıcısı: zynp11dgru@gmail.com
+2025-06-10T19:29:38: (node:13244) [MONGODB DRIVER] Warning: useNewUrlParser is a deprecated option: useNewUrlParser has no effect since Node.js Driver version 4.0.0 and will be removed in the next major version
+2025-06-10T19:29:38: (Use `node --trace-warnings ...` to show where the warning was created)
+2025-06-10T19:29:38: (node:13244) [MONGODB DRIVER] Warning: useUnifiedTopology is a deprecated option: useUnifiedTopology has no effect since Node.js Driver version 4.0.0 and will be removed in the next major version
+2025-06-10T19:29:38: Server 3000 portunda çalışıyor
+2025-06-10T19:29:38: MongoDB bağlantısı başarılı
+2025-06-10T19:29:40: Email kullanıcısı: zynp11dgru@gmail.com
+2025-06-10T19:29:40: (node:15576) [MONGODB DRIVER] Warning: useNewUrlParser is a deprecated option: useNewUrlParser has no effect since Node.js Driver version 4.0.0 and will be removed in the next major version
+2025-06-10T19:29:40: (Use `node --trace-warnings ...` to show where the warning was created)
+2025-06-10T19:29:40: (node:15576) [MONGODB DRIVER] Warning: useUnifiedTopology is a deprecated option: useUnifiedTopology has no effect since Node.js Driver version 4.0.0 and will be removed in the next major version
+2025-06-10T19:29:40: Server 3000 portunda çalışıyor
+2025-06-10T19:29:40: MongoDB bağlantısı başarılı
+2025-06-10T19:29:41: SMTP Sunucu hazır

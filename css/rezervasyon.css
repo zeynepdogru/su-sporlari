@@ -1,49 +1,200 @@
-/* FORM */
+/* Rezervasyon Formu Stilleri */
+.reservation-section {
+  max-width: 800px;
+  margin: 2rem auto;
+  padding: clamp(1rem, 3vw, 2rem);
+  background: var(--bg-color);
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.reservation-section h2 {
+  color: var(--primary-color);
+  font-size: clamp(1.5rem, 3vw, 2rem);
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
 .reservation-form {
+  display: grid;
+  gap: 1.5rem;
+}
+
+.form-group {
   display: flex;
   flex-direction: column;
-  gap: 0.8rem;
-  max-width: 500px;
-  margin: auto;
-  padding: 4rem;
-  background-color: #f1f1f1;
-  border-radius: 15px;
-  font-size: 1.5rem;
-  font-style: italic;
+  gap: 0.5rem;
 }
 
-.reservation-form label {
-  font-weight: bold;
+.form-group label {
+  color: var(--text-color);
+  font-size: clamp(0.9rem, 2vw, 1rem);
+  font-weight: 500;
 }
 
-.reservation-form input,
-.reservation-form select {
-  padding: 0.5rem;
-  border: 1px solid #ccc;
+.form-group input,
+.form-group select,
+.form-group textarea {
+  padding: 0.8rem;
+  border: 1px solid var(--border-color);
   border-radius: 5px;
-  font-size: 1rem;
+  font-size: clamp(0.9rem, 2vw, 1rem);
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  transition: var(--transition);
 }
-.reservation-form option {
-  font-size: 1.2rem;
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+  outline: none;
+  border-color: var(--primary-color);
+  box-shadow: 0 0 0 2px rgba(0, 95, 153, 0.1);
 }
-.reservation-form button {
-  background-color: #005f99;
-  color: #ccc;
+
+.form-group textarea {
+  resize: vertical;
+  min-height: 100px;
+}
+
+.form-group small {
+  color: var(--text-color);
+  opacity: 0.8;
+  font-size: 0.85rem;
+  margin-top: 0.2rem;
+}
+
+/* Submit Button */
+.submit-btn {
+  width: 100%;
+  padding: 1rem;
+  background-color: var(--primary-color);
+  color: white;
+  border: none;
   border-radius: 5px;
-  margin-top: 2rem;
-  height: 4vh;
-  font-size: larger;
+  font-size: clamp(1rem, 2vw, 1.2rem);
   cursor: pointer;
+  transition: var(--transition);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
 }
-.aciklama {
-  font-size: 1.5rem;
-  margin: auto;
-  max-width: 800px;
+
+.submit-btn:hover {
+  background-color: #004d7a;
+  transform: translateY(-2px);
+}
+
+.submit-btn:active {
+  transform: translateY(0);
+}
+
+.submit-btn .arrow {
+  transition: var(--transition);
+}
+
+.submit-btn:hover .arrow {
+  transform: translateX(5px);
+}
+
+/* Success Message */
+.success-message {
   margin-top: 2rem;
-  margin-bottom: 2rem;
-}
-#message {
-  margin-top: 10px;
+  padding: 1.5rem;
+  background-color: #e8f5e9;
+  border-radius: 5px;
   text-align: center;
-  font-weight: bold;
+  animation: slideIn 0.3s ease-out;
+}
+
+.success-message h3 {
+  color: #2e7d32;
+  margin-bottom: 0.5rem;
+  font-size: clamp(1.2rem, 2.5vw, 1.5rem);
+}
+
+.success-message p {
+  color: #1b5e20;
+  font-size: clamp(0.9rem, 2vw, 1rem);
+}
+
+/* Input Validation Styles */
+.form-group input:invalid,
+.form-group select:invalid {
+  border-color: #ff6b6b;
+}
+
+.form-group input:valid,
+.form-group select:valid {
+  border-color: #51cf66;
+}
+
+/* Dark Mode Support */
+@media (prefers-color-scheme: dark) {
+  .reservation-section {
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+  }
+
+  .form-group input,
+  .form-group select,
+  .form-group textarea {
+    background-color: #2a2a2a;
+    border-color: #444;
+  }
+
+  .success-message {
+    background-color: #1b5e20;
+  }
+
+  .success-message h3 {
+    color: #81c784;
+  }
+
+  .success-message p {
+    color: #a5d6a7;
+  }
+}
+
+/* Animations */
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .reservation-section {
+    margin: 1rem;
+    padding: 1rem;
+  }
+
+  .form-group {
+    gap: 0.3rem;
+  }
+}
+
+/* Mobile Optimization */
+@media (max-width: 480px) {
+  .reservation-section {
+    margin: 0.5rem;
+    padding: 1rem;
+    border-radius: 5px;
+  }
+
+  .form-group input,
+  .form-group select,
+  .form-group textarea {
+    padding: 0.6rem;
+  }
+
+  .submit-btn {
+    padding: 0.8rem;
+  }
 }
