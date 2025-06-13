@@ -12,13 +12,16 @@ document.addEventListener("DOMContentLoaded", function () {
   // Rezervasyonları MongoDB'ye kaydet ve tüm rezervasyonları getir
   async function saveAndGetReservations(formData) {
     try {
-      const response = await fetch("/api/reservations", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify(formData),
-      });
+      const response = await fetch(
+        "https://su-sporlari.vercel.app/api/reservations",
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify(formData),
+        }
+      );
 
       if (!response.ok) {
         throw new Error("Rezervasyon kaydedilemedi");
