@@ -12,12 +12,24 @@ app.use(express.static(__dirname));
 // MongoDB Atlas bağlantısı
 const MONGODB_URI =
   process.env.MONGODB_URI ||
-  "mongodb+srv://zynp11dgru:zynp11dgru@cluster0.mongodb.net/su-sporlari?retryWrites=true&w=majority";
+  "mongodb+srv://zynpdgru:zynp11dgru@susporlari.gaihfhr.mongodb.net/?retryWrites=true&w=majority&appName=SuSporlari";
+
+console.log("MongoDB URI:", MONGODB_URI); // Debug için
 
 mongoose
-  .connect(MONGODB_URI)
-  .then(() => console.log("MongoDB Atlas bağlantısı başarılı"))
-  .catch((err) => console.error("MongoDB bağlantı hatası:", err));
+  .connect(MONGODB_URI, {
+    useNewUrlParser: true,
+    useUnifiedTopology: true,
+    dbName: "su-sporlari", // Veritabanı adını belirt
+  })
+  .then(() => {
+    console.log("MongoDB Atlas bağlantısı başarılı");
+    console.log("Bağlantı detayları:", mongoose.connection);
+  })
+  .catch((err) => {
+    console.error("MongoDB bağlantı hatası:", err);
+    process.exit(1);
+  });
 
 // Ana sayfa route'u
 app.get("/", (req, res) => {
@@ -62,9 +74,12 @@ const Reservation = mongoose.model("Reservation", reservationSchema);
 // API endpoint'leri
 app.post("/api/reservations", async (req, res) => {
   try {
+    console.log("Gelen rezervasyon verisi:", req.body); // Debug için log
+
     // Yeni rezervasyonu kaydet
     const newReservation = new Reservation(req.body);
-    await newReservation.save();
+    const savedReservation = await newReservation.save();
+    console.log("Rezervasyon kaydedildi:", savedReservation); // Debug için log
 
     // Bugünün tarihini al
     const today = new Date();
@@ -82,7 +97,9 @@ app.post("/api/reservations", async (req, res) => {
           date: { $gt: today.toISOString().split("T")[0] },
         },
       ],
-    }).sort({ date: 1, time: 1 }); // Tarih ve saate göre sırala
+    }).sort({ date: 1, time: 1 });
+
+    console.log("Bulunan rezervasyonlar:", allReservations); // Debug için log
 
     res.json({
       success: true,
@@ -93,6 +110,8 @@ app.post("/api/reservations", async (req, res) => {
     res.status(500).json({
       success: false,
       error: "Rezervasyon kaydedilemedi",
+      details: error.message,
+      stack: error.stack, // Hata stack trace'ini de gönder
     });
   }
 });
