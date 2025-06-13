@@ -1,12 +1,13 @@
 const express = require("express");
 const mongoose = require("mongoose");
 const cors = require("cors");
+const path = require("path");
 const app = express();
 
 // Middleware
 app.use(cors());
 app.use(express.json());
-app.use(express.static("public"));
+app.use(express.static(__dirname));
 
 // MongoDB Atlas bağlantısı
 const MONGODB_URI =
@@ -17,6 +18,16 @@ mongoose
   .connect(MONGODB_URI)
   .then(() => console.log("MongoDB Atlas bağlantısı başarılı"))
   .catch((err) => console.error("MongoDB bağlantı hatası:", err));
+
+// Ana sayfa route'u
+app.get("/", (req, res) => {
+  res.sendFile(path.join(__dirname, "index.html"));
+});
+
+// Rezervasyon sayfası route'u
+app.get("/rezervasyon", (req, res) => {
+  res.sendFile(path.join(__dirname, "rezervasyon.html"));
+});
 
 // Rezervasyon şeması
 const reservationSchema = new mongoose.Schema({
