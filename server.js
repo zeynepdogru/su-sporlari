@@ -7,11 +7,6 @@ const app = express();
 // Middleware
 app.use(cors());
 app.use(express.json());
-
-// Statik dosyaları sun
-app.use(express.static(path.join(__dirname, "css")));
-app.use(express.static(path.join(__dirname, "js")));
-app.use(express.static(path.join(__dirname, "images")));
 app.use(express.static(__dirname));
 
 // MongoDB Atlas bağlantısı
