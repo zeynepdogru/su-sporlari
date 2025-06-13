@@ -29,6 +29,11 @@ app.get("/rezervasyon", (req, res) => {
   res.sendFile(path.join(__dirname, "rezervasyon.html"));
 });
 
+// Sidebar route'u
+app.get("/sidebar", (req, res) => {
+  res.sendFile(path.join(__dirname, "sidebar.html"));
+});
+
 // Rezervasyon şeması
 const reservationSchema = new mongoose.Schema({
   name: String,
