@@ -7,6 +7,11 @@ const app = express();
 // Middleware
 app.use(cors());
 app.use(express.json());
+
+// Statik dosyaları sun
+app.use(express.static(path.join(__dirname, "css")));
+app.use(express.static(path.join(__dirname, "js")));
+app.use(express.static(path.join(__dirname, "images")));
 app.use(express.static(__dirname));
 
 // MongoDB Atlas bağlantısı
@@ -32,6 +37,16 @@ app.get("/rezervasyon", (req, res) => {
 // Sidebar route'u
 app.get("/sidebar", (req, res) => {
   res.sendFile(path.join(__dirname, "sidebar.html"));
+});
+
+// CSS dosyaları için route
+app.get("/css/:file", (req, res) => {
+  res.sendFile(path.join(__dirname, "css", req.params.file));
+});
+
+// JavaScript dosyaları için route
+app.get("/js/:file", (req, res) => {
+  res.sendFile(path.join(__dirname, "js", req.params.file));
 });
 
 // Rezervasyon şeması
