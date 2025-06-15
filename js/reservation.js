@@ -181,8 +181,15 @@ document.addEventListener("DOMContentLoaded", function () {
 
         // Başarılı mesajını göster
         if (successMessage) {
+          // Rezervasyon detaylarını success message'a ekle
+          document.getElementById("successBranch").textContent =
+            formData.branch;
+          document.getElementById("successDate").textContent = formData.date;
+          document.getElementById("successTime").textContent = formData.time;
+
+          // Formu gizle ve success message'ı göster
           reservationForm.style.display = "none";
-          successMessage.style.display = "block";
+          successMessage.style.display = "flex";
           // Force a reflow to ensure the transition works
           successMessage.offsetHeight;
           successMessage.classList.add("visible");
