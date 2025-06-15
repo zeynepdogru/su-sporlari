@@ -181,7 +181,11 @@ document.addEventListener("DOMContentLoaded", function () {
 
         // Başarılı mesajını göster
         if (successMessage) {
+          reservationForm.style.display = "none";
           successMessage.style.display = "block";
+          // Force a reflow to ensure the transition works
+          successMessage.offsetHeight;
+          successMessage.classList.add("visible");
           if (errorMessage) {
             errorMessage.style.display = "none";
           }
@@ -190,10 +194,14 @@ document.addEventListener("DOMContentLoaded", function () {
         // Formu temizle
         reservationForm.reset();
 
-        // 3 saniye sonra başarı mesajını gizle
+        // 3 saniye sonra başarı mesajını gizle ve formu göster
         setTimeout(() => {
           if (successMessage) {
-            successMessage.style.display = "none";
+            successMessage.classList.remove("visible");
+            setTimeout(() => {
+              successMessage.style.display = "none";
+              reservationForm.style.display = "block";
+            }, 300); // Wait for fade out transition
           }
         }, 3000);
       } catch (error) {
