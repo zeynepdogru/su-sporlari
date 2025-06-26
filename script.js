@@ -11,12 +11,17 @@ document.addEventListener("DOMContentLoaded", function () {
         const sidebar = document.getElementById("sidebar");
         const toggleButton = document.getElementById("toggleSidebar");
         const backButton = document.getElementById("backButton");
+        const closeButton = document.getElementById("closeSidebar");
 
         toggleButton?.addEventListener("click", () => {
           sidebar?.classList.toggle("open");
         });
 
         backButton?.addEventListener("click", () => {
+          sidebar?.classList.remove("open");
+        });
+
+        closeButton?.addEventListener("click", () => {
           sidebar?.classList.remove("open");
         });
 
@@ -137,6 +142,16 @@ document.addEventListener("DOMContentLoaded", function () {
 
     // Mobilde sidebar açıkken kapatma butonu için tıklama olayı
     sidebar.addEventListener("click", function (e) {
+      // Kapatma butonuna tıklama (CSS ::before ile eklenen)
+      if (
+        window.innerWidth <= 992 &&
+        sidebar.classList.contains("open") &&
+        e.offsetX > sidebar.clientWidth - 60 &&
+        e.offsetY < 60
+      ) {
+        toggleSidebar(sidebar, body);
+      }
+      // Eski kod (sidebar alanına tıklama)
       if (
         window.innerWidth <= 480 &&
         (e.target === this || e.target.matches(".sidebar.open::before"))

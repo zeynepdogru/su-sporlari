@@ -17,7 +17,7 @@
 
 /* Açıldığında genişliği */
 .sidebar.open {
-  width: min(15rem, 80vw);
+  width: min(320px, 80vw);
 }
 
 /* Toggle butonu (☰) */
@@ -121,7 +121,7 @@
 /* RESPONSIVE */
 @media (max-width: 768px) {
   .sidebar.open {
-    width: min(12rem, 70vw);
+    width: min(240px, 70vw);
   }
 
   .sidebar-content a {
@@ -135,7 +135,7 @@
   }
 
   .sidebar.open {
-    width: 100%;
+    width: 100vw;
     height: 100%;
     position: fixed;
     top: 0;
@@ -169,7 +169,7 @@
   }
 
   /* Kapatma butonu ekle */
-  .sidebar.open::before {
+  /* .sidebar.open::before {
     content: "×";
     position: absolute;
     top: 1rem;
@@ -178,7 +178,7 @@
     color: white;
     cursor: pointer;
     z-index: 1001;
-  }
+  } */
 }
 
 /* Dark mode desteği */
@@ -189,5 +189,42 @@
 
   .sidebar-content a:hover {
     background-color: #034165;
+  }
+}
+
+.sidebar-close {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  font-size: 2.2rem;
+  color: white;
+  background: none;
+  border: none;
+  cursor: pointer;
+  z-index: 1001;
+  display: none;
+}
+
+@media (max-width: 992px) {
+  .sidebar {
+    margin-right: 1.2rem;
+  }
+  .sidebar-close {
+    display: none;
+  }
+  .sidebar.open .sidebar-close {
+    display: block;
+  }
+  .sidebar-toggle {
+    display: block;
+  }
+  .sidebar.open .sidebar-toggle {
+    display: none;
+  }
+}
+
+@media (max-width: 900px) {
+  .sidebar.open {
+    padding-right: 1.2rem;
   }
 }

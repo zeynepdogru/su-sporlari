@@ -288,37 +288,30 @@ body {
   .gallery {
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: auto;
+    gap: 1.2rem;
+    margin-left: 2vw;
+    margin-right: 2vw;
   }
   .gallery-item {
     grid-column: auto !important;
     grid-row: auto !important;
-    height: auto;
-    width: auto;
+    height: 220px;
+    width: 100%;
+    max-width: 340px;
+    margin-left: auto;
+    margin-right: auto;
   }
-
-  /* Tablet ve orta boy ekranlar için overlay ayarları */
+  .gallery-item:nth-child(1),
+  .gallery-item:nth-child(6) {
+    height: 220px !important;
+    max-height: 220px !important;
+  }
   .gallery-overlay {
-    opacity: 1;
-    background: linear-gradient(to top, rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.5));
-  }
-
-  .gallery-overlay h3,
-  .gallery-overlay p {
-    transform: translateY(0);
-  }
-
-  .gallery-item:hover .gallery-overlay {
-    opacity: 1;
-  }
-
-  .gallery-item:hover img {
-    transform: none;
-  }
-
-  .gallery-item:nth-child(4),
-  .gallery-item:nth-child(5) {
-    margin-bottom: 0;
-    margin-top: 0;
+    background: linear-gradient(
+      to top,
+      rgba(0, 0, 0, 0.55),
+      rgba(0, 0, 0, 0.22)
+    );
   }
 }
 
@@ -362,39 +355,29 @@ body {
 @media (max-width: 576px) {
   .gallery {
     grid-template-columns: 1fr;
-    gap: 1rem;
+    gap: 0.7rem;
+    margin-left: 5vw;
+    margin-right: 5vw;
   }
-
   .gallery-item {
     aspect-ratio: 3/4;
+    max-width: 270px;
+    margin-left: auto;
+    margin-right: auto;
+    height: 170px;
   }
-
+  .gallery-item:nth-child(1),
+  .gallery-item:nth-child(6) {
+    height: 170px !important;
+    max-height: 170px !important;
+  }
   .gallery-overlay {
-    opacity: 1;
-    background: linear-gradient(to top, rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.5));
+    background: linear-gradient(
+      to top,
+      rgba(0, 0, 0, 0.45),
+      rgba(0, 0, 0, 0.15)
+    );
   }
-
-  .gallery-overlay h3,
-  .gallery-overlay p {
-    transform: translateY(0);
-  }
-
-  .gallery-item:hover .gallery-overlay {
-    opacity: 1;
-  }
-
-  .gallery-item:hover img {
-    transform: none;
-  }
-
-  .gallery-overlay h3 {
-    font-size: 1.2rem;
-  }
-
-  .gallery-overlay p {
-    font-size: 0.9rem;
-  }
-
   .lightbox {
     padding: 1rem;
   }

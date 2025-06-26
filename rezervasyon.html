@@ -17,7 +17,7 @@
       crossorigin="anonymous"
     />
   </head>
-  <body class="with-sidebar">
+  <body>
     <div id="sidebar-container"></div>
     <div class="rez-logo-bar">
       <div class="rez-logo-circle">
@@ -58,11 +58,11 @@
             />
           </div>
           <div class="rez-field">
-            <select id="branch" name="branch" required>
+            <select id="branch" name="branch" required class="custom-select">
               <option value="">Branş Seçiniz</option>
-              <option value="kano">Kano</option>
-              <option value="surf">WindSurf</option>
-              <option value="sup">SUP</option>
+              <option value="Kano">🛶 Kano</option>
+              <option value="Surf">🌊 WindSurf</option>
+              <option value="Sup">🏄 SUP</option>
             </select>
           </div>
           <div class="rez-row">
@@ -102,9 +102,10 @@
           <div class="rez-success-icon"><i class="fas fa-check"></i></div>
           <h3>Rezervasyonunuz Alındı!</h3>
           <p>En kısa sürede sizinle iletişime geçeceğiz.</p>
-          <div class="rez-success-details">
-            <span id="successBranch"></span> | <span id="successDate"></span> |
-            <span id="successTime"></span>
+          <div class="rez-success-details rez-success-details-modern">
+            <div class="rez-success-row"><span id="successBranch"></span></div>
+            <div class="rez-success-row"><span id="successDate"></span></div>
+            <div class="rez-success-row"><span id="successTime"></span></div>
           </div>
         </div>
       </div>
@@ -113,7 +114,7 @@
     <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
     <script>
       (function () {
-        emailjs.init("qBUYsYPoU0SgiRQln");
+        emailjs.init("9hJs-Ce03kKKXG3hB");
       })();
     </script>
     <script src="js/reservation.js"></script>
