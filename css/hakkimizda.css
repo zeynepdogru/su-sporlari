@@ -1,212 +1,167 @@
+@import url("https://fonts.googleapis.com/css?family=Montserrat:400,700&display=swap");
+
 body {
   margin: 0;
-  font-family: Arial, sans-serif;
-  background-color: #f9f9f9;
+  font-family: "Montserrat", Arial, sans-serif;
+  background: linear-gradient(90deg, #034165 0%, #e0f7fa 100%);
+  color: #222;
 }
 
-.about-section {
-  padding: 1rem 0;
+.main-content {
+  padding: 0;
 }
 
-/* Üst Kısım - Yan Yana Görünüm */
-.about-top {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 4rem;
-  align-items: center;
-  margin-bottom: 6rem;
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
 }
 
-.about-image {
-  position: relative;
-  border-radius: 20px;
+/* About Cards */
+.about-cards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2.5rem;
+  justify-content: center;
+  margin-bottom: 4rem;
+  margin-top: 2rem;
+}
+.about-card {
+  background: #fff;
+  border-radius: 24px;
+  box-shadow: 0 8px 32px rgba(0, 188, 212, 0.08);
   overflow: hidden;
-  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+  width: 500px;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.3s cubic-bezier(0.4, 2, 0.6, 1), box-shadow 0.3s;
 }
-
-.about-image::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
+.about-card:hover {
+  transform: translateY(-8px) scale(1.03);
+  box-shadow: 0 16px 40px rgba(33, 150, 243, 0.13);
+}
+.about-card img {
   width: 100%;
-  height: 100%;
-  background: linear-gradient(45deg, rgba(0, 95, 153, 0.2), transparent);
-  z-index: 1;
-}
-
-.about-image img {
-  width: 100%;
-  height: 500px;
-  object-fit: cover;
-  transform: scale(1);
-  transition: transform 0.5s ease;
-}
-
-.about-image:hover img {
-  transform: scale(1.05);
-}
-
-.about-text {
-  padding: 2rem;
-}
-
-.about-text h2 {
-  font-size: clamp(2rem, 4vw, 2.5rem);
-  color: var(--primary-color);
-  margin-bottom: 1.5rem;
-  position: relative;
-}
-
-.about-text h2::after {
-  content: "";
-  position: absolute;
-  bottom: -10px;
-  left: 0;
-  width: 60px;
-  height: 3px;
-  background-color: var(--primary-color);
-}
-
-.about-text p {
-  font-size: clamp(1rem, 2vw, 1.2rem);
-  line-height: 1.8;
-  color: var(--text-color);
-  margin-bottom: 2rem;
-}
-
-/* Orta Kısım - Tam Genişlik */
-.about-middle {
-  text-align: center;
-  padding: 4rem 0;
-  background-color: rgba(0, 95, 153, 0.05);
-  border-radius: 20px;
-  margin: 4rem 0;
-}
-
-.about-middle h2 {
-  font-size: clamp(1.8rem, 3vw, 2.2rem);
-  color: var(--primary-color);
-  margin-bottom: 2rem;
-}
-
-.about-middle p {
-  font-size: clamp(1rem, 2vw, 1.2rem);
-  line-height: 1.8;
-  max-width: 800px;
-  margin: 0 auto;
-  padding: 0 2rem;
-}
-
-.about-middle ul {
-  list-style: none;
-  padding: 2rem 0;
-  max-width: 600px;
-  margin: 0 auto;
-}
-
-.about-middle li {
-  font-size: clamp(1rem, 2vw, 1.1rem);
-  padding: 1rem;
-  margin: 0.5rem 0;
-  background-color: white;
-  border-radius: 10px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
-  transition: transform 0.3s ease;
-}
-
-.about-middle li:hover {
-  transform: translateY(-5px);
-}
-
-/* Alt Kısım - Tam Genişlik Fotoğraf */
-.about-bottom {
-  margin-top: 4rem;
-  position: relative;
   height: 400px;
-  border-radius: 20px;
-  overflow: hidden;
-  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
-}
-
-.about-bottom img {
-  width: 100%;
-  height: 100%;
   object-fit: cover;
+  border-bottom: 4px solid #00bcd4;
+}
+.card-content {
+  padding: 2rem 1.5rem 1.5rem 1.5rem;
+}
+.card-content h2 {
+  font-size: 2rem;
+  color: #0077b6;
+  margin-bottom: 1rem;
+}
+.card-content p {
+  font-size: 1.2rem;
+  color: #444;
+  line-height: 1.7;
 }
 
-.about-bottom::after {
-  content: "";
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: linear-gradient(0deg, rgba(0, 0, 0, 0.4), transparent);
+/* Values Section */
+.about-values {
+  margin: 4rem 0 3rem 0;
+  text-align: center;
+}
+.about-values h2 {
+  font-size: 2.2rem;
+  color: #0077b6;
+  margin-bottom: 2.5rem;
+  font-weight: 700;
+}
+.values-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 2rem;
+  max-width: 900px;
+  margin: 0 auto;
+}
+.value-card {
+  background: linear-gradient(120deg, #e0f7fa 60%, #fff 100%);
+  border-radius: 18px;
+  box-shadow: 0 4px 16px rgba(0, 188, 212, 0.07);
+  padding: 2.2rem 1.2rem 1.5rem 1.2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: transform 0.25s, box-shadow 0.25s;
+}
+.value-card:hover {
+  transform: translateY(-6px) scale(1.04);
+  box-shadow: 0 8px 32px rgba(33, 150, 243, 0.13);
+}
+.value-card i {
+  font-size: 2.5rem;
+  color: #00bcd4;
+  margin-bottom: 1rem;
+}
+.value-card h3 {
+  font-size: 1.2rem;
+  color: #0077b6;
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+}
+.value-card p {
+  font-size: 1rem;
+  color: #333;
 }
 
-/* Dark Mode Support */
-@media (prefers-color-scheme: dark) {
-  .about-middle {
-    background-color: rgba(255, 255, 255, 0.05);
-  }
-
-  .about-middle li {
-    background-color: rgba(255, 255, 255, 0.1);
-  }
-}
-
-/* Tablet Responsive */
-@media (max-width: 992px) {
-  .about-top {
-    grid-template-columns: 1fr;
+/* Responsive */
+@media (max-width: 900px) {
+  .about-cards {
+    flex-direction: column;
+    align-items: center;
     gap: 2rem;
   }
-
-  .about-image {
-    height: 400px;
+  .about-card {
+    width: 100%;
+    max-width: 400px;
   }
-
-  .about-image img {
-    height: 100%;
+}
+@media (max-width: 600px) {
+  .about-hero {
+    min-height: 200px;
   }
-
-  .about-text {
-    padding: 1rem 0;
+  .hero-content {
+    padding: 2.5rem 0.5rem 2rem 0.5rem;
   }
-
-  .about-middle {
-    padding: 3rem 1rem;
+  .about-cards {
+    gap: 1.2rem;
+  }
+  .about-card img {
+    height: 140px;
+  }
+  .card-content {
+    padding: 1.2rem 0.7rem 1rem 0.7rem;
+  }
+  .about-values {
+    margin: 2.5rem 0 1.5rem 0;
+  }
+  .values-grid {
+    gap: 1rem;
+  }
+  .about-vision {
+    margin: 2rem 0 1rem 0;
+  }
+  .vision-content {
+    padding: 1.2rem 0.5rem;
   }
 }
 
-/* Mobile Responsive */
-@media (max-width: 768px) {
-  .about-section {
-    padding: 2rem 0;
-  }
-
-  .about-image {
-    height: 300px;
-  }
-
-  .about-bottom {
-    height: 300px;
+@media (max-width: 1100px) {
+  .values-grid {
+    grid-template-columns: repeat(3, 1fr);
   }
 }
-
-/* Small Mobile */
+@media (max-width: 700px) {
+  .values-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
 @media (max-width: 480px) {
-  .about-section {
-    padding: 1rem 0;
-  }
-
-  .about-image img,
-  .about-bottom img {
-    height: 250px;
-  }
-
-  .about-middle {
-    padding: 1rem;
+  .values-grid {
+    grid-template-columns: 1fr;
   }
 }

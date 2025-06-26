@@ -4,6 +4,10 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Rezervasyon - Su Sporları Merkezi</title>
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Montserrat:400,700&display=swap"
+    />
     <link rel="stylesheet" href="css/style.css" />
     <link rel="stylesheet" href="css/sidebar.css" />
     <link rel="stylesheet" href="css/rezervasyon.css" />
@@ -15,120 +19,96 @@
   </head>
   <body class="with-sidebar">
     <div id="sidebar-container"></div>
-
-    <div class="main-content">
-      <header class="main-header">
-        <div class="container">
-          <img src="images/logo.jpg" class="logo" />
-          <h1 class="header-title">Ansal WindSurf</h1>
-        </div>
-      </header>
-
-      <main class="container">
-        <section class="reservation-section">
-          <h2>Rezervasyon Formu</h2>
-          <div class="form-container">
-            <form id="reservationForm" class="reservation-form">
-              <div class="form-group">
-                <label for="name">Ad Soyad:</label>
-                <input type="text" id="name" name="name" required />
-              </div>
-
-              <div class="form-group">
-                <label for="email">E-posta:</label>
-                <input type="email" id="email" name="email" required />
-              </div>
-
-              <div class="form-group">
-                <label for="phone">Telefon:</label>
-                <input
-                  type="tel"
-                  id="phone"
-                  name="phone"
-                  required
-                  placeholder="5xx xxx xx xx"
-                />
-              </div>
-
-              <div class="form-group">
-                <label for="branch">Branş:</label>
-                <select id="branch" name="branch" required>
-                  <option value="">Seçiniz</option>
-                  <option value="kano">Kano</option>
-                  <option value="surf">WindSurf</option>
-                  <option value="sup">SUP</option>
-                </select>
-              </div>
-
-              <div class="form-group">
-                <label for="date">Tarih:</label>
-                <input type="date" id="date" name="date" required />
-                <small class="date-info"
-                  >Bugünden itibaren 15 gün içerisindeki bir tarih
-                  seçebilirsiniz.</small
-                >
-              </div>
-
-              <div class="form-group">
-                <label for="time">Saat:</label>
-                <select id="time" name="time" required>
-                  <option value="">Seçiniz</option>
-                </select>
-                <small class="time-info">10:00 - 19:00 arası seanslar</small>
-              </div>
-
-              <div class="form-group">
-                <label for="participants">Katılımcı Sayısı:</label>
-                <input
-                  type="number"
-                  id="participants"
-                  name="participants"
-                  min="1"
-                  max="10"
-                  required
-                />
-              </div>
-
-              <div class="form-group">
-                <label for="message">Ek Not:</label>
-                <textarea
-                  id="message"
-                  name="message"
-                  rows="4"
-                  placeholder="Varsa özel isteklerinizi yazabilirsiniz..."
-                ></textarea>
-              </div>
-
-              <div class="form-group">
-                <button type="submit" class="submit-btn">
-                  Rezervasyon Yap <i class="arrow">→</i>
-                </button>
-              </div>
-            </form>
-
-            <div
-              id="successMessage"
-              class="success-message"
-              style="display: none"
-            >
-              <div class="success-content">
-                <div class="success-icon">✓</div>
-                <h3>Rezervasyonunuz Alındı!</h3>
-                <p>En kısa sürede sizinle iletişime geçeceğiz.</p>
-                <div class="success-details">
-                  <p>
-                    <strong>Branş:</strong> <span id="successBranch"></span>
-                  </p>
-                  <p><strong>Tarih:</strong> <span id="successDate"></span></p>
-                  <p><strong>Saat:</strong> <span id="successTime"></span></p>
-                </div>
-              </div>
+    <div class="rez-logo-bar">
+      <div class="rez-logo-circle">
+        <img src="images/logo.jpg" alt="Ansal WindSurf Logo" />
+      </div>
+      <span class="rez-logo-title">Ansal WindSurf</span>
+    </div>
+    <div class="rez-bg-overlay">
+      <div class="rez-visual-full"></div>
+      <div class="rez-card-floating">
+        <h2>Rezervasyon Formu</h2>
+        <form id="reservationForm" class="rez-form">
+          <div class="rez-field">
+            <input
+              type="text"
+              id="name"
+              name="name"
+              required
+              placeholder="Ad Soyad"
+            />
+          </div>
+          <div class="rez-field">
+            <input
+              type="email"
+              id="email"
+              name="email"
+              required
+              placeholder="E-posta"
+            />
+          </div>
+          <div class="rez-field">
+            <input
+              type="tel"
+              id="phone"
+              name="phone"
+              required
+              placeholder="Telefon (5xx xxx xx xx)"
+            />
+          </div>
+          <div class="rez-field">
+            <select id="branch" name="branch" required>
+              <option value="">Branş Seçiniz</option>
+              <option value="kano">Kano</option>
+              <option value="surf">WindSurf</option>
+              <option value="sup">SUP</option>
+            </select>
+          </div>
+          <div class="rez-row">
+            <div class="rez-field">
+              <input type="date" id="date" name="date" required />
+            </div>
+            <div class="rez-field">
+              <select id="time" name="time" required>
+                <option value="">Saat Seçiniz</option>
+              </select>
             </div>
           </div>
-        </section>
-      </main>
+          <div class="rez-field">
+            <input
+              type="number"
+              id="participants"
+              name="participants"
+              min="1"
+              max="10"
+              required
+              placeholder="Katılımcı Sayısı"
+            />
+          </div>
+          <div class="rez-field">
+            <textarea
+              id="message"
+              name="message"
+              rows="2"
+              placeholder="Ek Not (isteğe bağlı)"
+            ></textarea>
+          </div>
+          <button type="submit" class="rez-btn">
+            <span>Rezervasyon Yap</span> <i class="fas fa-arrow-right"></i>
+          </button>
+        </form>
+        <div id="successMessage" class="rez-success" style="display: none">
+          <div class="rez-success-icon"><i class="fas fa-check"></i></div>
+          <h3>Rezervasyonunuz Alındı!</h3>
+          <p>En kısa sürede sizinle iletişime geçeceğiz.</p>
+          <div class="rez-success-details">
+            <span id="successBranch"></span> | <span id="successDate"></span> |
+            <span id="successTime"></span>
+          </div>
+        </div>
+      </div>
     </div>
-
     <script src="script.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
     <script>

@@ -162,7 +162,7 @@ document.addEventListener("DOMContentLoaded", function () {
         const allReservations = await saveAndGetReservations(formData);
 
         // EmailJS ile email gönder
-        await emailjs.send("service_9ioqb5s", "template_jx8b0sd", formData);
+        await emailjs.send("service_vtwshmq", "template_8rxsicl", formData);
 
         // Admin'e bildirim gönder
         const adminData = {
@@ -177,7 +177,7 @@ document.addEventListener("DOMContentLoaded", function () {
           reservations: formatReservationsList(allReservations),
         };
 
-        await emailjs.send("service_9ioqb5s", "template_u7zye6c", adminData);
+        await emailjs.send("service_vtwshmq", "template_ik4vh2r", adminData);
 
         // Başarılı mesajını göster
         if (successMessage) {
@@ -201,7 +201,7 @@ document.addEventListener("DOMContentLoaded", function () {
         // Formu temizle
         reservationForm.reset();
 
-        // 3 saniye sonra başarı mesajını gizle ve formu göster
+        // 10 saniye sonra başarı mesajını gizle ve formu göster
         setTimeout(() => {
           if (successMessage) {
             successMessage.classList.remove("visible");
@@ -210,7 +210,7 @@ document.addEventListener("DOMContentLoaded", function () {
               reservationForm.style.display = "block";
             }, 300); // Wait for fade out transition
           }
-        }, 3000);
+        }, 10000); // Changed from 3000 to 10000 milliseconds
       } catch (error) {
         console.error("FAILED...", error);
         // Hata mesajını göster
