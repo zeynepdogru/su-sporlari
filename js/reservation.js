@@ -13,7 +13,7 @@ document.addEventListener("DOMContentLoaded", function () {
   async function saveAndGetReservations(formData) {
     try {
       const response = await fetch(
-        "https://su-sporlari.vercel.app/api/reservations",
+        "https://su-sporlari-production.up.railway.app/api/reservations",
         {
           method: "POST",
           headers: {
