@@ -3,7 +3,7 @@ document.addEventListener("DOMContentLoaded", function () {
   const sidebarContainer = document.getElementById("sidebar-container");
 
   if (sidebarContainer) {
-    fetch("sidebar.html")
+    fetch("../html/sidebar.html")
       .then((res) => res.text())
       .then((data) => {
         sidebarContainer.innerHTML = data;
@@ -171,6 +171,44 @@ document.addEventListener("DOMContentLoaded", function () {
         toggleSidebar(sidebar, body);
       }
     });
+  }
+
+  // === SCROLL TO TOP BUTTON ===
+  const scrollBtn = document.getElementById("scrollToTopBtn");
+  function checkScrollBtn() {
+    if (!scrollBtn) return;
+    // Masaüstü harici (992px ve altı) ve biraz aşağı inildiyse göster
+    if (window.innerWidth <= 992 && window.scrollY > 100) {
+      scrollBtn.style.display = "block";
+    } else {
+      scrollBtn.style.display = "none";
+    }
+  }
+  if (scrollBtn) {
+    window.addEventListener("scroll", checkScrollBtn);
+    window.addEventListener("resize", checkScrollBtn);
+    scrollBtn.addEventListener("click", function () {
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    });
+    checkScrollBtn();
+  }
+
+  // === MOBİL SABİT SOSYAL İKON ===
+  function handleMobileSocialFixed() {
+    const el = document.querySelector(".mobile-social-fixed");
+    if (!el) return;
+    if (window.innerWidth <= 600) {
+      el.style.display = "flex";
+    } else {
+      el.style.display = "none";
+    }
+  }
+  window.addEventListener("resize", handleMobileSocialFixed);
+  window.addEventListener("DOMContentLoaded", handleMobileSocialFixed);
+  // Eğer sidebar dinamik yüklendiyse, tekrar kontrol et
+  if (sidebarContainer) {
+    const observer = new MutationObserver(handleMobileSocialFixed);
+    observer.observe(sidebarContainer, { childList: true, subtree: true });
   }
 });
 

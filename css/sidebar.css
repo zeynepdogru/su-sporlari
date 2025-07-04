@@ -19,7 +19,18 @@
 .sidebar.open {
   width: min(320px, 80vw);
 }
-
+.sidebar-close {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  font-size: 2.2rem;
+  color: white;
+  background: none;
+  border: none;
+  cursor: pointer;
+  z-index: 1001;
+  display: none;
+}
 /* Toggle butonu (☰) */
 .sidebar-toggle {
   background: none;
@@ -119,112 +130,87 @@
 }
 
 /* RESPONSIVE */
+
 @media (max-width: 768px) {
   .sidebar.open {
     width: min(240px, 70vw);
-  }
-
-  .sidebar-content a {
-    font-size: 0.9rem;
-  }
-}
-
-@media (max-width: 480px) {
-  .sidebar {
-    width: 3.5rem;
-  }
-
-  .sidebar.open {
-    width: 100vw;
-    height: 100%;
-    position: fixed;
-    top: 0;
     left: 0;
     background-color: rgba(3, 65, 101, 0.98);
     backdrop-filter: blur(5px);
   }
 
-  .sidebar.open .sidebar-content {
-    margin-top: 3rem;
-    height: calc(100% - 6rem);
-    overflow-y: auto;
-  }
-
   .sidebar-content a {
     text-align: center;
-    padding: 1rem 0;
-    font-size: 1.1rem;
+    font-size: 0.9rem;
   }
-
-  .sidebar.open .sidebar-footer {
-    flex-direction: row;
-    justify-content: center;
-    gap: 2rem;
-    width: 100%;
-    padding: 1rem 0;
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    background-color: rgba(0, 0, 0, 0.1);
-  }
-
-  /* Kapatma butonu ekle */
-  /* .sidebar.open::before {
-    content: "×";
-    position: absolute;
-    top: 1rem;
-    right: 1rem;
-    font-size: 2rem;
-    color: white;
-    cursor: pointer;
-    z-index: 1001;
-  } */
-}
-
-/* Dark mode desteği */
-@media (prefers-color-scheme: dark) {
-  .sidebar {
-    background-color: #023047;
-  }
-
-  .sidebar-content a:hover {
-    background-color: #034165;
-  }
-}
-
-.sidebar-close {
-  position: absolute;
-  top: 1rem;
-  right: 1rem;
-  font-size: 2.2rem;
-  color: white;
-  background: none;
-  border: none;
-  cursor: pointer;
-  z-index: 1001;
-  display: none;
 }
 
 @media (max-width: 992px) {
   .sidebar {
-    margin-right: 1.2rem;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 60px;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    z-index: 1000;
+    background: linear-gradient(90deg, #034165 0%, #e0f7fa 100%);
   }
-  .sidebar-close {
-    display: none;
-  }
-  .sidebar.open .sidebar-close {
-    display: block;
-  }
-  .sidebar-toggle {
-    display: block;
-  }
-  .sidebar.open .sidebar-toggle {
-    display: none;
-  }
-}
-
-@media (max-width: 900px) {
   .sidebar.open {
+    width: 100vw;
+    height: 60px;
     padding-right: 1.2rem;
+    flex-direction: row;
+  }
+  .sidebar-content {
+    display: flex !important;
+    flex-direction: row;
+    align-items: center;
+    margin-top: 0;
+    width: 100%;
+    opacity: 1;
+    position: static;
+    background: none;
+    height: 60px;
+  }
+  .sidebar-content ul {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100%;
+    justify-content: flex-start;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+  }
+  .sidebar-content li {
+    width: auto;
+    flex: 1 1 0;
+    min-width: 0;
+  }
+  .sidebar-content a {
+    padding: 0 0.5rem;
+    font-size: 0.85rem;
+    text-align: center;
+    height: 44px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    white-space: nowrap;
+  }
+  .sidebar-footer {
+    display: none;
+  }
+  .sidebar-toggle,
+  .sidebar-close {
+    display: none !important;
+  }
+  .sidebar-content ul li:nth-child(3), /* Sörf */
+  .sidebar-content ul li:nth-child(4), /* SUP */
+  .sidebar-content ul li:nth-child(5)  /* Kano */ {
+    display: none;
   }
 }

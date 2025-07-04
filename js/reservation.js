@@ -157,70 +157,48 @@ document.addEventListener("DOMContentLoaded", function () {
         return;
       }
 
-      try {
-        // Rezervasyonu kaydet ve tüm rezervasyonları al
-        const allReservations = await saveAndGetReservations(formData);
-
-        // EmailJS ile email gönder
-        await emailjs.send("service_vtwshmq", "template_8rxsicl", formData);
-
-        // Admin'e bildirim gönder
-        const adminData = {
-          name: formData.name,
-          email: formData.email,
-          phone: formData.phone,
-          branch: formData.branch,
-          date: formData.date,
-          time: formData.time,
-          people: formData.people,
-          notes: formData.notes || "Not belirtilmedi",
-          reservations: formatReservationsList(allReservations),
+      // Onay mesajını hemen göster
+      if (successMessage) {
+        const branchEmojis = {
+          Kano: "🛶 Kano",
+          Surf: "🌊 WindSurf",
+          Sup: "🏄 SUP",
         };
-
-        await emailjs.send("service_vtwshmq", "template_ik4vh2r", adminData);
-
-        // Başarılı mesajını göster
-        if (successMessage) {
-          // Rezervasyon detaylarını success message'a ekle
-          document.getElementById("successBranch").textContent =
-            formData.branch;
-          document.getElementById("successDate").textContent = formData.date;
-          document.getElementById("successTime").textContent = formData.time;
-
-          // Formu gizle ve success message'ı göster
-          reservationForm.style.display = "none";
-          successMessage.style.display = "flex";
-          // Force a reflow to ensure the transition works
-          successMessage.offsetHeight;
-          successMessage.classList.add("visible");
-          if (errorMessage) {
-            errorMessage.style.display = "none";
-          }
-        }
-
-        // Formu temizle
-        reservationForm.reset();
-
-        // 10 saniye sonra başarı mesajını gizle ve formu göster
-        setTimeout(() => {
-          if (successMessage) {
-            successMessage.classList.remove("visible");
-            setTimeout(() => {
-              successMessage.style.display = "none";
-              reservationForm.style.display = "block";
-            }, 300); // Wait for fade out transition
-          }
-        }, 10000); // Changed from 3000 to 10000 milliseconds
-      } catch (error) {
-        console.error("FAILED...", error);
-        // Hata mesajını göster
+        document.getElementById("successBranch").textContent =
+          branchEmojis[formData.branch] || formData.branch;
+        document.getElementById("successDate").textContent = formData.date;
+        document.getElementById("successTime").textContent = formData.time;
+        const cardFloating = document.querySelector(".rez-card-floating");
+        if (cardFloating) cardFloating.style.display = "none";
+        successMessage.style.display = "block";
         if (errorMessage) {
-          errorMessage.style.display = "block";
-          if (successMessage) {
-            successMessage.style.display = "none";
-          }
+          errorMessage.style.display = "none";
         }
       }
+
+      // Sunucuya kaydetme ve e-posta işlemleri arka planda başlasın
+      (async () => {
+        try {
+          const allReservations = await saveAndGetReservations(formData);
+          await emailjs.send("service_vtwshmq", "template_8rxsicl", formData);
+          const adminData = {
+            name: formData.name,
+            email: formData.email,
+            phone: formData.phone,
+            branch: formData.branch,
+            date: formData.date,
+            time: formData.time,
+            people: formData.people,
+            notes: formData.notes || "Not belirtilmedi",
+            reservations: formatReservationsList(allReservations),
+          };
+          await emailjs.send("service_vtwshmq", "template_ik4vh2r", adminData);
+        } catch (error) {
+          alert(
+            "Rezervasyon kaydedilirken veya e-posta gönderilirken bir hata oluştu. Lütfen daha sonra tekrar deneyin."
+          );
+        }
+      })();
     });
   }
 

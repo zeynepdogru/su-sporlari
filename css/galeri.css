@@ -9,28 +9,13 @@
 body {
   margin: 0;
   padding: 0;
-  background: linear-gradient(90deg, #e0f7fa 0%, #034165 100%);
-  font-family: sans-serif;
+  background: linear-gradient(90deg, #034165 0%, #e0f7fa 100%);
+  font-family: "Montserrat", Arial, sans-serif;
 }
 
-.title {
-  color: var(--primary-color);
-  text-align: center;
-  font-size: 2rem;
+.galeri-mobile-title {
+  display: none;
 }
-
-.container {
-  width: 95%;
-  max-width: 1400px;
-  margin: auto;
-  padding-top: 0;
-}
-
-/* Gallery Container */
-/* .gallery-container {
-  padding: clamp(2rem, 5vw, 4rem) 0 0 0;
-} */
-
 /* Galeri sayfası 3 sütunlu grid */
 .galeri-3sutun {
   display: grid;
@@ -40,33 +25,7 @@ body {
   align-items: flex-start;
   width: 100%;
 }
-.galeri-baslik {
-  grid-column: 1 / 2;
-  min-width: 220px;
-  max-width: 520px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  height: 100vh;
-  margin: 0;
-  padding: 0;
-  color: var(--primary-color);
-}
-.galeri-baslik h2 {
-  margin: 0;
-  padding: 0;
-  font-size: 3.5rem;
-  letter-spacing: 0.1em;
-}
-.gallery {
-  grid-column: 2 / 3;
-  flex: none;
-  margin: 0;
-  padding: 0;
-  padding-top: 0;
-  margin-top: 0;
-}
+
 .galeri-bosluk {
   grid-column: 3 / 4;
   min-width: 120px;
@@ -74,47 +33,22 @@ body {
   height: 100%;
 }
 
-/* Gallery Filters */
-.gallery-filters {
-  display: flex;
-  justify-content: center;
-  gap: 1rem;
-  flex-wrap: wrap;
-}
-
-.filter-btn {
-  padding: 0.8rem 1.5rem;
-  border: 2px solid var(--primary-color);
-  background: transparent;
-  color: var(--primary-color);
-  border-radius: 30px;
-  cursor: pointer;
-  font-size: 1rem;
-  transition: all var(--transition-speed) ease;
-}
-
-.filter-btn:hover,
-.filter-btn.active {
-  background: var(--primary-color);
-  color: white;
-}
-
 /* Özel 6 görsellik mozaik grid */
 .gallery {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
-  grid-template-rows: 320px 320px 320px 0;
+  grid-template-rows: 320px 320px 320px 320px 320px 320px 10px;
   gap: 1.5rem;
   max-width: 1400px;
   margin: 0 auto;
   padding: 2rem 0;
 }
-.gallery-item {
-  min-width: 0;
-  min-height: 0;
-}
+
 .gallery-item:nth-child(1),
-.gallery-item:nth-child(6) {
+.gallery-item:nth-child(6),
+.gallery-item:nth-child(7),
+.gallery-item:nth-child(8),
+.gallery-item:nth-child(9) {
   height: 100%;
   width: 100%;
 }
@@ -141,6 +75,18 @@ body {
 .gallery-item:nth-child(6) {
   grid-column: 4 / 5;
   grid-row: 1 / 3;
+}
+.gallery-item:nth-child(7) {
+  grid-column: 1 / 3;
+  grid-row: 4 / 5;
+}
+.gallery-item:nth-child(8) {
+  grid-column: 3 / 4;
+  grid-row: 4 / 6;
+}
+.gallery-item:nth-child(9) {
+  grid-column: 3 / 5;
+  grid-row: 3 / 4;
 }
 
 .gallery-item img {
@@ -200,19 +146,6 @@ body {
   font-size: 1rem;
   transform: translateY(20px);
   transition: transform 0.3s ease 0.1s;
-}
-
-.gallery-item:hover .gallery-overlay h3,
-.gallery-item:hover .gallery-overlay p {
-  transform: translateY(0);
-}
-
-/* Section Title */
-.section-title {
-  font-size: 2.5rem;
-  color: var(--primary-color);
-  text-align: center;
-  margin-top: 2rem;
 }
 
 /* Lightbox Styles */
@@ -276,21 +209,26 @@ body {
 .lightbox-next {
   right: 2rem;
 }
-
-/* Responsive Design */
-@media (max-width: 1400px) {
-  .gallery {
-    gap: 1.5rem;
-  }
+/* Lightbox içindeki overlay'i gizle - tüm ekran boyutları için */
+.lightbox .gallery-overlay {
+  display: none;
 }
 
+/* RESPONSIVE */
+
 @media (max-width: 992px) {
+  body {
+    padding-top: 60px;
+  }
   .gallery {
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: auto;
     gap: 1.2rem;
     margin-left: 2vw;
     margin-right: 2vw;
+  }
+  .galeri-3sutun {
+    display: block;
   }
   .gallery-item {
     grid-column: auto !important;
@@ -302,7 +240,10 @@ body {
     margin-right: auto;
   }
   .gallery-item:nth-child(1),
-  .gallery-item:nth-child(6) {
+  .gallery-item:nth-child(6),
+  .gallery-item:nth-child(7),
+  .gallery-item:nth-child(8),
+  .gallery-item:nth-child(9) {
     height: 220px !important;
     max-height: 220px !important;
   }
@@ -313,9 +254,70 @@ body {
       rgba(0, 0, 0, 0.22)
     );
   }
+  .last-img {
+    margin-bottom: 15px;
+  }
+  .galeri-mobile-title {
+    display: block;
+    font-size: 2.5rem;
+    font-weight: 700;
+    text-align: center;
+    margin: 1.2rem 0 0.5rem 0;
+    letter-spacing: 1px;
+    padding: 0.7rem 0;
+    background: linear-gradient(90deg, #00bcd4 0%, #034165 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-shadow: 0 2px 8px rgba(0, 188, 212, 0.07);
+  }
 }
-
 @media (max-width: 768px) {
+  .gallery {
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: auto;
+    gap: 0.7rem;
+    margin-left: 5vw;
+    margin-right: 5vw;
+  }
+  .gallery-item {
+    aspect-ratio: 3/4;
+    max-width: 270px;
+    margin-left: auto;
+    margin-right: auto;
+    height: 170px;
+  }
+
+  .lightbox {
+    padding: 1rem;
+  }
+
+  .lightbox-prev {
+    left: 1rem;
+  }
+
+  .lightbox-next {
+    right: 1rem;
+  }
+  .galeri-mobile-title {
+    display: block;
+    font-size: 2.5rem;
+    font-weight: 700;
+    text-align: center;
+    margin: 1.2rem 0 0 0;
+    letter-spacing: 1px;
+    padding: 0.7rem 0;
+    color: #034165;
+  }
+
+  .gallery-item:nth-child(1),
+  .gallery-item:nth-child(6),
+  .gallery-item:nth-child(7),
+  .gallery-item:nth-child(8),
+  .gallery-item:nth-child(9) {
+    height: 170px !important;
+    max-height: 170px !important;
+  }
   .gallery-filters {
     gap: 0.5rem;
   }
@@ -337,10 +339,8 @@ body {
     font-size: 1.5rem;
   }
 
-  /* Tablet için overlay ayarları */
   .gallery-overlay {
     opacity: 1;
-    background: linear-gradient(to top, rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.5));
   }
 
   .gallery-overlay h3 {
@@ -350,34 +350,45 @@ body {
   .gallery-overlay p {
     font-size: 1rem;
   }
+  .last-img {
+    margin-bottom: 15px;
+  }
 }
-
 @media (max-width: 576px) {
   .gallery {
     grid-template-columns: 1fr;
-    gap: 0.7rem;
-    margin-left: 5vw;
-    margin-right: 5vw;
+    gap: 1rem;
   }
+
   .gallery-item {
     aspect-ratio: 3/4;
-    max-width: 270px;
-    margin-left: auto;
-    margin-right: auto;
-    height: 170px;
   }
-  .gallery-item:nth-child(1),
-  .gallery-item:nth-child(6) {
-    height: 170px !important;
-    max-height: 170px !important;
-  }
+
   .gallery-overlay {
-    background: linear-gradient(
-      to top,
-      rgba(0, 0, 0, 0.45),
-      rgba(0, 0, 0, 0.15)
-    );
+    opacity: 1;
   }
+
+  .gallery-overlay h3,
+  .gallery-overlay p {
+    transform: translateY(0);
+  }
+
+  .gallery-item:hover .gallery-overlay {
+    opacity: 1;
+  }
+
+  .gallery-item:hover img {
+    transform: none;
+  }
+
+  .gallery-overlay h3 {
+    font-size: 1.2rem;
+  }
+
+  .gallery-overlay p {
+    font-size: 0.9rem;
+  }
+
   .lightbox {
     padding: 1rem;
   }
@@ -388,114 +399,5 @@ body {
 
   .lightbox-next {
     right: 1rem;
-  }
-}
-
-/* Dark Mode Support */
-@media (prefers-color-scheme: dark) {
-  .filter-btn {
-    color: white;
-    border-color: white;
-  }
-
-  .filter-btn:hover,
-  .filter-btn.active {
-    background: white;
-    color: var(--primary-color);
-  }
-
-  .section-title {
-    color: var(--primary-color);
-  }
-
-  .gallery-item {
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-  }
-}
-
-/* =============================
-   Responsive Grid Ayarları
-============================= */
-
-@media (max-width: 480px) {
-  .lightbox img {
-    max-width: 95%;
-    max-height: 70%;
-  }
-
-  .lightbox .close,
-  .lightbox-prev,
-  .lightbox-next {
-    font-size: 1.8rem;
-  }
-}
-
-/* Lightbox içindeki overlay'i gizle - tüm ekran boyutları için */
-.lightbox .gallery-overlay {
-  display: none;
-}
-
-@media (max-width: 600px) {
-  .galeri-baslik h2 {
-    font-size: 1.3rem;
-  }
-  .galeri-baslik {
-    margin-bottom: 1.2rem;
-    margin-top: 0.7rem;
-  }
-}
-
-@media (max-width: 900px) {
-  .galeri-3sutun {
-    display: block;
-  }
-  .galeri-baslik,
-  .galeri-bosluk {
-    display: none;
-  }
-  .gallery {
-    margin: 0;
-    padding: 0;
-  }
-  .galeri-baslik-mobil {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100vw;
-    background: var(--primary-color);
-    color: white;
-    font-size: 2.1rem;
-    padding: 1.1rem 0 1.1rem 0;
-    letter-spacing: 0.2em;
-    z-index: 10;
-    position: relative;
-    margin-bottom: 1.2rem;
-    margin-top: 0;
-    gap: 0.2em;
-  }
-  .galeri-baslik-mobil span {
-    display: inline-block;
-    font-weight: bold;
-    font-size: 2.1rem;
-  }
-}
-
-.galeri-baslik-mobil {
-  display: none;
-}
-
-.galeri-mobile-title {
-  display: none;
-}
-@media (max-width: 700px) {
-  .galeri-mobile-title {
-    display: block;
-    font-size: 2rem;
-    font-weight: 700;
-    color: #0077b6;
-    text-align: center;
-    margin: 1.2rem 0 0.5rem 0;
-    letter-spacing: 1px;
-    padding: 0.7rem 0;
   }
 }
