@@ -1,3 +1,4 @@
+require("dotenv").config();
 const express = require("express");
 const mongoose = require("mongoose");
 const cors = require("cors");
@@ -7,24 +8,18 @@ const app = express();
 // Middleware
 app.use(cors());
 app.use(express.json());
-app.use(express.static(__dirname));
+app.use("/css", express.static(path.join(__dirname, "css")));
+app.use("/js", express.static(path.join(__dirname, "js")));
+app.use("/images", express.static(path.join(__dirname, "images")));
+app.use(express.static(__dirname)); // HTML dosyaları için
 
 // MongoDB Atlas bağlantısı
-const MONGODB_URI =
-  process.env.MONGODB_URI ||
-  "mongodb+srv://zynpdgru:zynp11dgru@susporlari.gaihfhr.mongodb.net/?retryWrites=true&w=majority&appName=SuSporlari";
-
-console.log("MongoDB URI:", MONGODB_URI); // Debug için
+const MONGODB_URI = process.env.MONGODB_URI;
 
 mongoose
-  .connect(MONGODB_URI, {
-    useNewUrlParser: true,
-    useUnifiedTopology: true,
-    dbName: "su-sporlari", // Veritabanı adını belirt
-  })
+  .connect(MONGODB_URI)
   .then(() => {
     console.log("MongoDB Atlas bağlantısı başarılı");
-    console.log("Bağlantı detayları:", mongoose.connection);
   })
   .catch((err) => {
     console.error("MongoDB bağlantı hatası:", err);
