@@ -396,7 +396,7 @@ body.sidebar-open {
 /* Ana sayfa arka planı (footer hariç) tamamen kaplasın */
 .main-bg-image {
   min-height: 100vh;
-  background-image: url(../images/kapak2.jpg);
+  background-image: url(/images/kapak2.jpg);
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -476,7 +476,7 @@ body.sidebar-open {
 }
 /* surf.html arka planı */
 .surf-bg {
-  background-image: url(../images/kapak2.jpg);
+  background-image: url(/images/kapak2.jpg);
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
