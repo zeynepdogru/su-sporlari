@@ -11,6 +11,7 @@ const corsOptions = {
   credentials: true,
 };
 app.use(cors(corsOptions));
+app.use(express.json());
 
 // Statik dosyalar (CSS, JS, images) ve HTML için public klasörünü kök olarak ayarla
 app.use(express.static(path.join(__dirname, "public")));
