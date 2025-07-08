@@ -9,6 +9,7 @@
     { "src": "/galeri", "dest": "/html/galeri.html" },
     { "src": "/hakkimizda", "dest": "/html/hakkimizda.html" },
     { "src": "/", "dest": "/html/index.html" },
-    { "src": "/(.*)", "dest": "/$1" }
+    { "src": "/index", "dest": "/html/index.html" },
+    { "src": "/index.html", "dest": "/html/index.html" }
   ]
 }
