@@ -5,9 +5,13 @@ const cors = require("cors");
 const path = require("path");
 const app = express();
 
-// Middleware
-app.use(cors());
-app.use(express.json());
+const corsOptions = {
+  origin: "https://su-sporlari.vercel.app",
+  methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS"],
+  credentials: true,
+};
+app.use(cors(corsOptions));
+
 // Statik dosyalar (CSS, JS, images) ve HTML için public klasörünü kök olarak ayarla
 app.use(express.static(path.join(__dirname, "public")));
 
