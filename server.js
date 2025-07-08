@@ -8,10 +8,8 @@ const app = express();
 // Middleware
 app.use(cors());
 app.use(express.json());
-app.use("/css", express.static(path.join(__dirname, "css")));
-app.use("/js", express.static(path.join(__dirname, "js")));
-app.use("/images", express.static(path.join(__dirname, "images")));
-app.use(express.static(__dirname)); // HTML dosyaları için
+// Statik dosyalar (CSS, JS, images) ve HTML için public klasörünü kök olarak ayarla
+app.use(express.static(path.join(__dirname, "public")));
 
 // MongoDB Atlas bağlantısı
 const MONGODB_URI = process.env.MONGODB_URI;
@@ -28,27 +26,27 @@ mongoose
 
 // Ana sayfa route'u
 app.get("/", (req, res) => {
-  res.sendFile(path.join(__dirname, "index.html"));
+  res.sendFile(path.join(__dirname, "public/html/index.html"));
 });
 
-// Rezervasyon sayfası route'u
+// Diğer HTML sayfaları için yönlendirmeler
+app.get("/surf", (req, res) => {
+  res.sendFile(path.join(__dirname, "public/html/surf.html"));
+});
+app.get("/sup", (req, res) => {
+  res.sendFile(path.join(__dirname, "public/html/sup.html"));
+});
+app.get("/kano", (req, res) => {
+  res.sendFile(path.join(__dirname, "public/html/kano.html"));
+});
 app.get("/rezervasyon", (req, res) => {
-  res.sendFile(path.join(__dirname, "rezervasyon.html"));
+  res.sendFile(path.join(__dirname, "public/html/rezervasyon.html"));
 });
-
-// Sidebar route'u
-app.get("/sidebar", (req, res) => {
-  res.sendFile(path.join(__dirname, "sidebar.html"));
+app.get("/galeri", (req, res) => {
+  res.sendFile(path.join(__dirname, "public/html/galeri.html"));
 });
-
-// CSS dosyaları için route
-app.get("/css/:file", (req, res) => {
-  res.sendFile(path.join(__dirname, "css", req.params.file));
-});
-
-// JavaScript dosyaları için route
-app.get("/js/:file", (req, res) => {
-  res.sendFile(path.join(__dirname, "js", req.params.file));
+app.get("/hakkimizda", (req, res) => {
+  res.sendFile(path.join(__dirname, "public/html/hakkimizda.html"));
 });
 
 // Rezervasyon şeması
