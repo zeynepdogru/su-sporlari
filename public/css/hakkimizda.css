@@ -46,6 +46,9 @@ body {
   object-fit: cover;
   border-bottom: 4px solid #00bcd4;
 }
+.about-card a {
+  word-break: break-all;
+}
 .card-content {
   padding: 2rem 1.5rem 1.5rem 1.5rem;
 }
