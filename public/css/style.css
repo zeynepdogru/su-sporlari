@@ -586,6 +586,9 @@ body.sidebar-open {
     font-size: 1rem;
     margin: 1rem 0;
   }
+  .footer-left p {
+    color: var(--footer-bg);
+  }
   .branches-overlay {
     margin-top: 80px;
     gap: 1.2rem;
@@ -656,7 +659,13 @@ body.sidebar-open {
   }
   .activity-description {
     font-size: 0.92rem;
-    color: var(--bg-color);
+    color: #000000; /* Yumuşak beyaz (şeffaflık %80) */
+  }
+  .section-title {
+    color: #021f30;
+  }
+  .section-title::after {
+    background-color: #021f30 !important;
   }
 }
 

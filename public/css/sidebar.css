@@ -200,6 +200,8 @@
     align-items: center;
     justify-content: center;
     white-space: nowrap;
+    color: #111111 !important;
+    font-weight: 500;
   }
   .sidebar-footer {
     display: none;

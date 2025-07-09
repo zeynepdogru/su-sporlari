@@ -204,9 +204,18 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 
   // Event listeners
-  dateInput.addEventListener("change", () =>
-    updateTimeOptions(dateInput.value)
-  );
+  dateInput.addEventListener("change", () => {
+    const min = dateInput.min;
+    const max = dateInput.max;
+    if (dateInput.value < min) {
+      dateInput.value = min;
+      alert("En erken bugünden itibaren rezervasyon yapabilirsiniz.");
+    } else if (dateInput.value > max) {
+      dateInput.value = max;
+      alert("En fazla 15 gün sonrasına kadar rezervasyon yapılabilir.");
+    }
+    updateTimeOptions(dateInput.value);
+  });
 
   // Başlangıç ayarları
   setupDateConstraints();
