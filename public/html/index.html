@@ -104,9 +104,43 @@
           ve Kano gibi alternatiflerle denizin tadını çıkarabilirsiniz.
         </p>
       </div>
-      <main class="container">
-        <!-- main içeriği-->
-      </main>
+      <div id="windguru-widget" style="margin-top: 30px">
+        <h3>Rüzgar Tahmini</h3>
+        <!-- Windguru Widget Script -->
+        <script id="wg_fwdg_122808_3_1752407325093">
+          (function (window, document) {
+            var loader = function () {
+              var arg = [
+                "s=122808",
+                "m=3",
+                "mw=84",
+                "uid=wg_fwdg_122808_3_1752407325093",
+                "wj=knots",
+                "tj=c",
+                "waj=m",
+                "tij=cm",
+                "odh=0",
+                "doh=24",
+                "fhours=240",
+                "hrsm=3",
+                "vt=forecasts",
+                "lng=tr",
+                "p=WINDSPD,GUST,MWINDSPD,SMER,HTSGW,PERPW,DIRPW,TMPE",
+              ];
+              var script = document.createElement("script");
+              var tag = document.getElementsByTagName("script")[0];
+              script.src =
+                "https://www.windguru.cz/js/widget.php?" + arg.join("&");
+              tag.parentNode.insertBefore(script, tag);
+            };
+
+            window.addEventListener
+              ? window.addEventListener("load", loader, false)
+              : window.attachEvent("onload", loader);
+          })(window, document);
+        </script>
+      </div>
+
       <footer class="footer">
         <div class="footer-left">
           <h1>İletişim</h1>

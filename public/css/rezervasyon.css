@@ -285,6 +285,7 @@ body {
     font-size: 0.7rem;
   }
   .rez-row {
+    width: 100%;
     flex-direction: column;
     gap: 0.7rem;
   }
