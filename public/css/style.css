@@ -1,10 +1,18 @@
 /* GENEL STİLLER */
 :root {
-  --primary-color: #005f99;
-  --text-color: #333;
+  --primary-color: #2563eb;
+  --primary-light: #3b82f6;
+  --primary-dark: #1d4ed8;
+  --accent-color: #06b6d4;
+  --text-color: #1f2937;
+  --text-light: #6b7280;
   --bg-color: #ffffff;
-  --footer-bg: #f1f1f1;
-  --border-color: #ccc;
+  --bg-light: #f8fafc;
+  --footer-bg: #f1f5f9;
+  --border-color: #e2e8f0;
+  --success-color: #10b981;
+  --warning-color: #f59e0b;
+  --error-color: #ef4444;
   --transition: all 0.3s ease;
   --sidebar-width: clamp(3.5rem, 5vw, 5rem);
 }
@@ -63,8 +71,11 @@ body.sidebar-open {
   font-weight: 700;
   margin-bottom: 0.5rem;
   letter-spacing: 1px;
-  color: var(--primary-color);
-  text-shadow: 0 2px 8px rgba(0, 188, 212, 0.07);
+  background: linear-gradient(135deg, var(--primary-color), var(--accent-color));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-shadow: 0 2px 8px rgba(37, 99, 235, 0.1);
 }
 
 /* HAKKIMIZDA */
@@ -106,6 +117,7 @@ body.sidebar-open {
   font-size: clamp(1.4rem, 3vw, 1.8rem);
   color: var(--primary-color);
   margin-bottom: 0.5rem;
+  font-weight: 600;
 }
 
 .branch p,
@@ -128,6 +140,7 @@ body.sidebar-open {
   transition: var(--transition);
   font-size: clamp(1rem, 2vw, 1.5rem);
   position: relative;
+  font-weight: 500;
 }
 
 .btn::after {
@@ -137,7 +150,7 @@ body.sidebar-open {
   left: 0;
   width: 100%;
   height: 2px;
-  background-color: var(--primary-color);
+  background: linear-gradient(90deg, var(--primary-color), var(--accent-color));
   transform: scaleX(0);
   transition: var(--transition);
 }

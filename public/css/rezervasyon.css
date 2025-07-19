@@ -3,7 +3,7 @@
 body {
   font-family: "Montserrat", Arial, sans-serif;
   margin: 0;
-  background: linear-gradient(90deg, #034165 0%, #e0f7fa 100%);
+  background: linear-gradient(135deg, #2563eb 0%, #06b6d4 50%, #3b82f6 100%);
   min-height: 100vh;
 }
 .rez-logo-bar {
@@ -21,13 +21,13 @@ body {
 .rez-logo-circle {
   width: 210px;
   height: 210px;
-  background: rgba(3, 65, 101, 0.13);
+  background: rgba(37, 99, 235, 0.1);
   border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
-  box-shadow: 0 2px 12px rgba(0, 119, 182, 0.1);
-  border: 2.5px solid #e0f7fa;
+  box-shadow: 0 2px 12px rgba(37, 99, 235, 0.15);
+  border: 2.5px solid #06b6d4;
   backdrop-filter: blur(2px);
 }
 .rez-logo-circle img {
@@ -46,11 +46,11 @@ body {
   letter-spacing: 2px;
   margin-top: 1.2rem;
   margin-bottom: 0.5rem;
-  background: linear-gradient(90deg, #00bcd4 0%, #034165 100%);
+  background: linear-gradient(135deg, #06b6d4 0%, #2563eb 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
-  text-shadow: 0 2px 8px rgba(0, 188, 212, 0.07);
+  text-shadow: 0 2px 8px rgba(6, 182, 212, 0.1);
 }
 .rez-card-floating {
   position: relative;
@@ -76,7 +76,7 @@ body {
   font-weight: 800;
   margin-bottom: 1.5rem;
   margin-top: 0.5rem;
-  color: #034165;
+  color: #2563eb;
   letter-spacing: 1.2px;
   text-align: center;
 }
@@ -120,8 +120,8 @@ body {
 .rez-form select:focus,
 .rez-form textarea:focus {
   outline: none;
-  box-shadow: 0 0 0 2px #00bcd4;
-  border: 1.5px solid #00bcd4;
+  box-shadow: 0 0 0 2px #06b6d4;
+  border: 1.5px solid #06b6d4;
 }
 .rez-form textarea {
   resize: vertical;
@@ -133,7 +133,7 @@ body {
   padding: 1.1rem;
   margin-top: 1.2rem;
   width: 100%;
-  background: linear-gradient(90deg, #034165 0%, #00bcd4 100%);
+  background: linear-gradient(135deg, #2563eb 0%, #06b6d4 100%);
   color: #fff;
   border: none;
   cursor: pointer;
@@ -142,9 +142,10 @@ body {
   justify-content: center;
   gap: 0.7rem;
   transition: background 0.2s, transform 0.2s;
+  font-weight: 600;
 }
 .rez-btn:hover {
-  background: linear-gradient(90deg, #00bcd4 0%, #034165 100%);
+  background: linear-gradient(135deg, #06b6d4 0%, #2563eb 100%);
   transform: translateY(-2px) scale(1.03);
 }
 
