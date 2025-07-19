@@ -71,21 +71,19 @@ body.sidebar-open {
   font-weight: 700;
   margin-bottom: 0.5rem;
   letter-spacing: 1px;
-  background: linear-gradient(135deg, var(--primary-color), var(--accent-color));
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-  text-shadow: 0 2px 8px rgba(37, 99, 235, 0.1);
+  color: #ffffff;
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
 }
 
 /* HAKKIMIZDA */
 .aboutwe {
   padding: clamp(2rem, 5vw, 5rem) 0;
   font-size: clamp(1rem, 2.5vw, 1.6rem);
-  color: var(--bg-color);
+  color: #ffffff;
   text-align: center;
   width: min(90%, 800px);
   margin: auto;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
 }
 
 /* BRANŞLAR */
@@ -167,7 +165,8 @@ body.sidebar-open {
   font-weight: bold;
 }
 #windguru-widget h3 {
-  color: var(--bg-color);
+  color: #ffffff;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
 }
 /* FOOTER */
 .footer {
@@ -196,14 +195,16 @@ body.sidebar-open {
 .footer h1,
 .footer h2,
 .footer p {
-  color: var(--bg-color);
+  color: #ffffff;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
 }
 
 .footer-left h1 {
   margin-bottom: 2rem;
   text-align: center;
-  color: var(--bg-color);
+  color: #ffffff;
   font-size: clamp(1.7rem, 3vw, 1.8rem);
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
 }
 
 .footer p {
@@ -211,6 +212,8 @@ body.sidebar-open {
   margin: 1rem 0;
   font-size: clamp(1.5rem, 2vw, 1.2rem);
   text-align: center;
+  color: #ffffff;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
 }
 
 .footer-socials {
@@ -415,6 +418,25 @@ body.sidebar-open {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+  position: relative;
+}
+
+/* Arkaplan üzerine koyu overlay ekle */
+.main-bg-image::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.4);
+  z-index: 1;
+}
+
+/* İçerik overlay'in üzerinde olsun */
+.main-bg-image > * {
+  position: relative;
+  z-index: 2;
 }
 
 /* Logo ve başlık en üstte ve ortada */
