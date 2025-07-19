@@ -60,10 +60,35 @@ html {
 
 body {
   font-family: "Montserrat", Arial, sans-serif;
-  background-color: transparent;
+  background-image: url(/images/kapak2.jpg) !important;
+  background-size: cover !important;
+  background-position: center !important;
+  background-repeat: no-repeat !important;
+  background-attachment: fixed !important;
   color: var(--text-color);
   line-height: 1.6;
   overflow-x: hidden;
+  min-height: 100vh;
+  position: relative;
+}
+
+/* Body üzerine koyu overlay ekle */
+body::before {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.4);
+  z-index: 1;
+  pointer-events: none;
+}
+
+/* Body içeriği overlay'in üzerinde olsun */
+body > * {
+  position: relative;
+  z-index: 2;
 }
 
 body.with-sidebar {
