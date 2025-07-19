@@ -63,6 +63,24 @@ app.get("/hakkimizda", (req, res) => {
   res.sendFile(path.join(__dirname, "public/html/hakkimizda.html"));
 });
 
+// Keep-alive endpoint - Uptime Robot için
+app.get("/ping", (req, res) => {
+  res.status(200).json({
+    status: "alive",
+    timestamp: new Date().toISOString(),
+    uptime: process.uptime()
+  });
+});
+
+// Health check endpoint
+app.get("/health", (req, res) => {
+  res.status(200).json({
+    status: "healthy",
+    timestamp: new Date().toISOString(),
+    mongodb: mongoose.connection.readyState === 1 ? "connected" : "disconnected"
+  });
+});
+
 // Rezervasyon şeması
 const reservationSchema = new mongoose.Schema({
   name: String,

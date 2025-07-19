@@ -10,6 +10,13 @@
     { "src": "/hakkimizda", "dest": "/html/hakkimizda.html" },
     { "src": "/", "dest": "/html/index.html" },
     { "src": "/anasayfa", "dest": "/html/index.html" },
-    { "src": "/index.html", "dest": "/html/index.html" }
-  ]
+    { "src": "/index.html", "dest": "/html/index.html" },
+    { "src": "/ping", "dest": "/uptime-robot.html" },
+    { "src": "/health", "dest": "/uptime-robot.html" }
+  ],
+  "functions": {
+    "api/*.js": {
+      "maxDuration": 30
+    }
+  }
 }
