@@ -3,31 +3,28 @@
 body {
   font-family: "Montserrat", Arial, sans-serif;
   margin: 0;
-  background-image: url(/images/kapak2.jpg);
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
+  background: #525252 !important;
   min-height: 100vh;
   position: relative;
 }
 
-/* Arkaplan üzerine koyu overlay ekle */
-body::before {
-  content: '';
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: rgba(0, 0, 0, 0.4);
+/* İçerik z-index ayarı */
+body > * {
+  position: relative;
   z-index: 1;
 }
 
-/* İçerik overlay'in üzerinde olsun */
-body > * {
-  position: relative;
-  z-index: 2;
+.rez-main-center {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  padding: 2rem;
+  box-sizing: border-box;
+  max-width: 1200px;
+  margin: 0 auto;
+  width: 100%;
 }
 .rez-logo-bar {
   display: flex;
@@ -37,20 +34,19 @@ body > * {
   gap: 1.5rem;
   margin-top: 3.5rem;
   margin-bottom: 2.5rem;
-  width: 100vw;
-  max-width: 100vw;
+  width: 100%;
   text-align: center;
 }
 .rez-logo-circle {
   width: 210px;
   height: 210px;
-  background: rgba(59, 130, 246, 0.1);
+  background: rgba(236, 98, 95, 0.1);
   border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
-  box-shadow: 0 2px 12px rgba(59, 130, 246, 0.15);
-  border: 2.5px solid #06b6d4;
+  box-shadow: 0 2px 12px rgba(236, 98, 95, 0.15);
+  border: 2.5px solid #EC625F;
   backdrop-filter: blur(2px);
 }
 .rez-logo-circle img {
@@ -69,11 +65,11 @@ body > * {
   letter-spacing: 2px;
   margin-top: 1.2rem;
   margin-bottom: 0.5rem;
-  background: linear-gradient(135deg, #06b6d4 0%, #3b82f6 100%);
+  background: linear-gradient(135deg, #EC625F 0%, #FFBC4C 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
-  text-shadow: 0 2px 8px rgba(6, 182, 212, 0.1);
+  text-shadow: 0 2px 8px rgba(236, 98, 95, 0.1);
 }
 .rez-card-floating {
   position: relative;
@@ -81,33 +77,35 @@ body > * {
   margin: 0 auto;
   margin-top: 0;
   margin-bottom: 50px;
-  background: rgba(255, 255, 255, 0.95);
+  background: #EC625F;
   border-radius: 24px;
-  box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
+  box-shadow: 0 8px 25px rgba(236, 98, 95, 0.3);
   padding: 3.2rem 2.5rem 2.6rem 2.5rem;
   max-width: 750px;
-  width: 95vw;
+  width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 1.5rem;
   backdrop-filter: blur(10px);
-  border: 1px solid rgba(255, 255, 255, 0.2);
+  border: 2px solid #EC625F;
+  transition: all 0.3s ease;
 }
 .rez-card-floating h2 {
   font-size: 2.1rem;
   font-weight: 800;
   margin-bottom: 1.5rem;
   margin-top: 0.5rem;
-  color: #3b82f6;
+  color: #FFDE63;
   letter-spacing: 1.2px;
   text-align: center;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
 }
 
 .rez-form {
-  background: #f8fafd;
+  background: #FEFFC4;
   border-radius: 18px;
-  box-shadow: 0 2px 16px rgba(0, 188, 212, 0.07);
+  box-shadow: 0 2px 16px rgba(255, 255, 196, 0.3);
   padding: 2.2rem 1.2rem 1.2rem 1.2rem;
   gap: 1.3rem;
   margin-bottom: 0.5rem;
@@ -130,21 +128,21 @@ body > * {
 .rez-form input,
 .rez-form select,
 .rez-form textarea {
-  border: 1.5px solid #e0f7fa;
+  border: 1.5px solid #FFBC4C;
   border-radius: 12px;
   background: #fff;
   padding: 1.1rem 1.2rem;
   font-size: 1.08rem;
   margin-top: 0.1rem;
-  box-shadow: 0 2px 8px rgba(0, 188, 212, 0.04);
+  box-shadow: 0 2px 8px rgba(255, 188, 76, 0.2);
   transition: box-shadow 0.2s, border 0.2s;
 }
 .rez-form input:focus,
 .rez-form select:focus,
 .rez-form textarea:focus {
   outline: none;
-  box-shadow: 0 0 0 2px #06b6d4;
-  border: 1.5px solid #06b6d4;
+  box-shadow: 0 0 0 2px #EC625F;
+  border: 1.5px solid #EC625F;
 }
 .rez-form textarea {
   resize: vertical;
@@ -156,8 +154,8 @@ body > * {
   padding: 1.1rem;
   margin-top: 1.2rem;
   width: 100%;
-  background: linear-gradient(135deg, #3b82f6 0%, #06b6d4 100%);
-  color: #fff;
+  background: linear-gradient(135deg, #EC625F 0%, #FFBC4C 100%);
+  color: #525252;
   border: none;
   cursor: pointer;
   display: flex;
@@ -169,22 +167,23 @@ body > * {
   box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1);
 }
 .rez-btn:hover {
-  background: linear-gradient(135deg, #06b6d4 0%, #3b82f6 100%);
+  background: linear-gradient(135deg, #FFBC4C 0%, #EC625F 100%);
   transform: translateY(-2px);
-  box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1);
+  box-shadow: 0 10px 15px -3px rgba(236, 98, 95, 0.3);
 }
 
 /* --- YENİ ONAY MESAJI TASARIMI --- */
 .custom-success-card {
-  background: #fff;
+  background: #EC625F;
   border-radius: 20px;
-  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.12);
+  box-shadow: 0 8px 25px rgba(236, 98, 95, 0.3);
   padding: 2.5rem 2rem 2rem 2rem;
   max-width: 400px;
   margin: 2rem auto;
   text-align: center;
   position: relative;
   animation: pop-in 0.5s cubic-bezier(0.68, -0.55, 0.27, 1.55);
+  border: 2px solid #EC625F;
 }
 @keyframes pop-in {
   0% {
@@ -204,28 +203,29 @@ body > * {
 .custom-success-card h3 {
   margin: 0 0 0.5rem 0;
   font-size: 1.7rem;
-  color: #222;
+  color: #FFDE63;
   font-weight: 700;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
 }
 .custom-success-desc {
-  color: #555;
+  color: #FEFFC4;
   font-size: 1.05rem;
   margin-bottom: 1.2rem;
 }
 .custom-success-details {
-  background: #f6f6f6;
+  background: #FEFFC4;
   border-radius: 12px;
   padding: 1rem;
   margin-bottom: 1.2rem;
   font-size: 1.08rem;
-  color: #333;
+  color: #525252;
   text-align: left;
 }
 .custom-success-details div {
   margin-bottom: 0.4rem;
 }
 .custom-success-btn {
-  background: #2ecc71;
+  background: #EC625F;
   color: #fff;
   border: none;
   border-radius: 8px;
@@ -236,7 +236,7 @@ body > * {
   transition: background 0.2s;
 }
 .custom-success-btn:hover {
-  background: #27ae60;
+  background: #FFBC4C;
 }
 @media (max-width: 600px) {
   .custom-success-card {
@@ -278,7 +278,7 @@ body > * {
   .rez-card-floating {
     padding: 1.2rem 0.2rem 0.7rem 0.2rem;
     border-radius: 16px;
-    max-width: 98vw;
+    max-width: 100%;
     margin-bottom: 15px;
   }
   .rez-card-floating h2 {
@@ -298,7 +298,7 @@ body > * {
     padding-left: 0 !important;
   }
   .rez-card-floating {
-    max-width: 75vw;
+    max-width: 100%;
     padding: 1.5rem 0.5rem 1rem 0.5rem;
     border-radius: 18px;
     margin-bottom: 20px;

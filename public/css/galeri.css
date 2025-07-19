@@ -9,31 +9,15 @@
 body {
   margin: 0;
   padding: 0;
-  background-image: url(/images/kapak2.jpg);
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
+  background: #525252;
   font-family: "Montserrat", Arial, sans-serif;
   position: relative;
 }
 
-/* Arkaplan üzerine koyu overlay ekle */
-body::before {
-  content: '';
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: rgba(0, 0, 0, 0.4);
-  z-index: 1;
-}
-
-/* İçerik overlay'in üzerinde olsun */
+/* İçerik z-index ayarı */
 body > * {
   position: relative;
-  z-index: 2;
+  z-index: 1;
 }
 
 .galeri-mobile-title {
