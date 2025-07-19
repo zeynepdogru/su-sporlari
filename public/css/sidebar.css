@@ -1,30 +1,4 @@
 /* Sidebar container */
-#sidebar-container {
-  background-image: url(/images/kapak2.jpg) !important;
-  background-size: cover !important;
-  background-position: center !important;
-  background-repeat: no-repeat !important;
-  background-attachment: fixed !important;
-  position: relative;
-}
-
-#sidebar-container::before {
-  content: '';
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: rgba(0, 0, 0, 0.4);
-  z-index: 0;
-  pointer-events: none;
-}
-
-#sidebar-container > * {
-  position: relative;
-  z-index: 1;
-}
-
 .sidebar {
   position: fixed;
   top: 0;
@@ -35,7 +9,7 @@
   backdrop-filter: blur(10px);
   transition: all 0.3s ease;
   overflow-x: hidden;
-  z-index: 1001;
+  z-index: 1000;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -55,7 +29,7 @@
   background: none;
   border: none;
   cursor: pointer;
-  z-index: 1001;
+  z-index: 1000;
   display: none;
 }
 /* Toggle butonu (☰) */
