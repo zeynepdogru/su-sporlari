@@ -1,20 +1,42 @@
 /* GENEL STİLLER */
 :root {
-  --primary-color: #2563eb;
-  --primary-light: #3b82f6;
-  --primary-dark: #1d4ed8;
+  /* Modern Mavi-Turkuaz Paleti */
+  --primary-color: #0ea5e9;
+  --primary-light: #38bdf8;
+  --primary-dark: #0284c7;
   --accent-color: #06b6d4;
-  --text-color: #1f2937;
-  --text-light: #6b7280;
+  --accent-light: #22d3ee;
+  
+  /* Nötr Renkler */
+  --text-color: #0f172a;
+  --text-light: #64748b;
+  --text-muted: #94a3b8;
   --bg-color: #ffffff;
   --bg-light: #f8fafc;
-  --footer-bg: #f1f5f9;
+  --bg-dark: #0f172a;
+  
+  /* Gölge ve Kenarlık */
   --border-color: #e2e8f0;
+  --border-light: #f1f5f9;
+  --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+  --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.1);
+  --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.1);
+  
+  /* Durum Renkleri */
   --success-color: #10b981;
   --warning-color: #f59e0b;
   --error-color: #ef4444;
-  --transition: all 0.3s ease;
+  --info-color: #3b82f6;
+  
+  /* Geçiş Efektleri */
+  --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-fast: all 0.15s cubic-bezier(0.4, 0, 0.2, 1);
+  
+  /* Layout */
   --sidebar-width: clamp(3.5rem, 5vw, 5rem);
+  --border-radius: 12px;
+  --border-radius-lg: 16px;
+  --border-radius-xl: 24px;
 }
 
 * {
@@ -138,7 +160,17 @@ body.sidebar-open {
   transition: var(--transition);
   font-size: clamp(1rem, 2vw, 1.5rem);
   position: relative;
-  font-weight: 500;
+  font-weight: 600;
+  padding: 0.75rem 1.5rem;
+  border-radius: var(--border-radius);
+  background: rgba(14, 165, 233, 0.1);
+  border: 1px solid rgba(14, 165, 233, 0.2);
+}
+
+.btn:hover {
+  background: rgba(14, 165, 233, 0.15);
+  border-color: rgba(14, 165, 233, 0.3);
+  transform: translateY(-1px);
 }
 
 .btn::after {
@@ -476,23 +508,31 @@ body.sidebar-open {
 
 /* Branch kartları */
 .branches-list .branch {
-  background: rgba(255, 255, 255, 0.97);
-  border-radius: 24px;
-  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.15);
+  background: rgba(255, 255, 255, 0.95);
+  border-radius: var(--border-radius-xl);
+  box-shadow: var(--shadow-lg);
   padding: 2.5rem 2rem;
   display: flex;
   flex-direction: row;
   align-items: center;
   gap: 2.5rem;
   position: relative;
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
 }
 .branches-list .branch img {
   width: 220px;
   height: 220px;
   object-fit: cover;
-  border-radius: 18px;
-  box-shadow: 0 2px 12px 0 rgba(30, 41, 59, 0.08);
-  background: #f1f5f9;
+  border-radius: var(--border-radius-lg);
+  box-shadow: var(--shadow-md);
+  background: var(--bg-light);
+  transition: var(--transition);
+}
+
+.branches-list .branch img:hover {
+  transform: scale(1.02);
+  box-shadow: var(--shadow-lg);
 }
 .branches-list .branch .content {
   flex: 1;
