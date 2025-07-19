@@ -51,6 +51,11 @@
 html {
   font-size: 16px;
   scroll-behavior: smooth;
+  background-image: url(/images/kapak2.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
 }
 
 body {
@@ -449,10 +454,11 @@ body.sidebar-open {
 /* Ana sayfa arka planı (footer hariç) tamamen kaplasın */
 .main-bg-image {
   min-height: 100vh;
-  background-image: url(/images/kapak2.jpg);
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
+  background-image: url(/images/kapak2.jpg) !important;
+  background-size: cover !important;
+  background-position: center !important;
+  background-repeat: no-repeat !important;
+  background-attachment: fixed !important;
   position: relative;
 }
 
