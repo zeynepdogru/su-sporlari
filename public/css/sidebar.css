@@ -230,9 +230,9 @@
     margin-top: auto;
   }
   
-  .sidebar-content ul li:nth-child(3), /* Sörf */
-  .sidebar-content ul li:nth-child(4), /* SUP */
-  .sidebar-content ul li:nth-child(5)  /* Kano */ {
+  .sidebar-content ul li:nth-child(2), /* WindSurf */
+  .sidebar-content ul li:nth-child(3), /* SUP */
+  .sidebar-content ul li:nth-child(4)  /* Kano */ {
     display: block;
   }
 }
@@ -335,9 +335,20 @@
     text-shadow: 0 1px 3px rgba(0, 0, 0, 1);
   }
   
-  .sidebar-content ul li:nth-child(3), /* Sörf */
-  .sidebar-content ul li:nth-child(4), /* SUP */
-  .sidebar-content ul li:nth-child(5)  /* Kano */ {
+  /* Mobilde galeri linkini öne çıkar */
+  .sidebar-content ul li:nth-child(5) a { /* Galeri */
+    color: #FFDE63 !important;
+    font-weight: bold !important;
+  }
+  
+  .sidebar-content ul li:nth-child(5) a:hover {
+    background-color: rgba(236, 98, 95, 0.8) !important;
+    color: #FFFFFF !important;
+  }
+  
+  .sidebar-content ul li:nth-child(2), /* WindSurf */
+  .sidebar-content ul li:nth-child(3), /* SUP */
+  .sidebar-content ul li:nth-child(4)  /* Kano */ {
     display: none;
   }
 }
