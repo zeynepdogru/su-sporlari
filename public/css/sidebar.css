@@ -148,7 +148,7 @@
 
 @media (max-width: 992px) {
   .sidebar {
-    position: absolute;
+    position: fixed;
     top: 0;
     left: 0;
     width: 100vw;
@@ -156,10 +156,11 @@
     flex-direction: row;
     align-items: center;
     justify-content: flex-start;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
     z-index: 1000;
-    background: rgba(0, 0, 0, 0.8);
+    background: rgba(59, 130, 246, 0.95);
     backdrop-filter: blur(10px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
   }
   .sidebar.open {
     width: 100vw;
