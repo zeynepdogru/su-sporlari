@@ -3,7 +3,7 @@
 body {
   font-family: "Montserrat", Arial, sans-serif;
   margin: 0;
-  background: #525252 !important;
+  background: linear-gradient(135deg, #200E3A 0%, #2D1B4E 50%, #1A0B2E 100%) !important;
   min-height: 100vh;
   position: relative;
 }
@@ -40,13 +40,13 @@ body > * {
 .rez-logo-circle {
   width: 210px;
   height: 210px;
-  background: rgba(236, 98, 95, 0.1);
+  background: rgba(121, 158, 255, 0.1);
   border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
-  box-shadow: 0 2px 12px rgba(236, 98, 95, 0.15);
-  border: 2.5px solid #EC625F;
+  box-shadow: 0 2px 12px rgba(121, 158, 255, 0.15);
+  border: 2.5px solid #799EFF;
   backdrop-filter: blur(2px);
 }
 .rez-logo-circle img {
@@ -65,11 +65,11 @@ body > * {
   letter-spacing: 2px;
   margin-top: 1.2rem;
   margin-bottom: 0.5rem;
-  background: linear-gradient(135deg, #EC625F 0%, #FFBC4C 100%);
+  background: linear-gradient(135deg, #799EFF 0%, #FFBC4C 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
-  text-shadow: 0 2px 8px rgba(236, 98, 95, 0.1);
+  text-shadow: 0 2px 8px rgba(121, 158, 255, 0.1);
 }
 .rez-card-floating {
   position: relative;
@@ -77,9 +77,9 @@ body > * {
   margin: 0 auto;
   margin-top: 0;
   margin-bottom: 50px;
-  background: #EC625F;
+  background: linear-gradient(135deg, #2B194B 0%, #1E0F35 100%);
   border-radius: 24px;
-  box-shadow: 0 8px 25px rgba(236, 98, 95, 0.3);
+  box-shadow: 0 8px 25px rgba(43, 25, 75, 0.3);
   padding: 3.2rem 2.5rem 2.6rem 2.5rem;
   max-width: 750px;
   width: 100%;
@@ -88,7 +88,7 @@ body > * {
   align-items: center;
   gap: 1.5rem;
   backdrop-filter: blur(10px);
-  border: 2px solid #EC625F;
+  border: 2px solid #2B194B;
   transition: all 0.3s ease;
 }
 .rez-card-floating h2 {
@@ -141,8 +141,8 @@ body > * {
 .rez-form select:focus,
 .rez-form textarea:focus {
   outline: none;
-  box-shadow: 0 0 0 2px #EC625F;
-  border: 1.5px solid #EC625F;
+  box-shadow: 0 0 0 2px #799EFF;
+  border: 1.5px solid #799EFF;
 }
 .rez-form textarea {
   resize: vertical;
@@ -154,7 +154,7 @@ body > * {
   padding: 1.1rem;
   margin-top: 1.2rem;
   width: 100%;
-  background: linear-gradient(135deg, #EC625F 0%, #FFBC4C 100%);
+  background: linear-gradient(135deg, #799EFF 0%, #FFBC4C 100%);
   color: #525252;
   border: none;
   cursor: pointer;
@@ -167,23 +167,23 @@ body > * {
   box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1);
 }
 .rez-btn:hover {
-  background: linear-gradient(135deg, #FFBC4C 0%, #EC625F 100%);
+  background: linear-gradient(135deg, #FFBC4C 0%, #799EFF 100%);
   transform: translateY(-2px);
-  box-shadow: 0 10px 15px -3px rgba(236, 98, 95, 0.3);
+  box-shadow: 0 10px 15px -3px rgba(121, 158, 255, 0.3);
 }
 
 /* --- YENİ ONAY MESAJI TASARIMI --- */
 .custom-success-card {
-  background: #EC625F;
+  background: linear-gradient(135deg, #2B194B 0%, #1E0F35 100%);
   border-radius: 20px;
-  box-shadow: 0 8px 25px rgba(236, 98, 95, 0.3);
+  box-shadow: 0 8px 25px rgba(43, 25, 75, 0.3);
   padding: 2.5rem 2rem 2rem 2rem;
   max-width: 400px;
   margin: 2rem auto;
   text-align: center;
   position: relative;
   animation: pop-in 0.5s cubic-bezier(0.68, -0.55, 0.27, 1.55);
-  border: 2px solid #EC625F;
+  border: 2px solid #2B194B;
 }
 @keyframes pop-in {
   0% {
@@ -225,7 +225,7 @@ body > * {
   margin-bottom: 0.4rem;
 }
 .custom-success-btn {
-  background: #EC625F;
+  background: #799EFF;
   color: #fff;
   border: none;
   border-radius: 8px;

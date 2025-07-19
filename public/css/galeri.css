@@ -9,7 +9,7 @@
 body {
   margin: 0;
   padding: 0;
-  background: #525252;
+  background: linear-gradient(135deg, #200E3A 0%, #2D1B4E 50%, #1A0B2E 100%);
   font-family: "Montserrat", Arial, sans-serif;
   position: relative;
 }

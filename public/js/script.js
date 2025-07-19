@@ -219,3 +219,33 @@ function toggleSidebar(sidebar, body) {
     body.classList.toggle("sidebar-open");
   }
 }
+
+// === TELEFON GÖRÜNÜMÜ SIDEBAR DAVRANIŞI ===
+// Sadece telefon görünümünde scroll ile sidebar'ı gizle/göster
+function handleMobileSidebarScroll() {
+  if (window.innerWidth > 992) return; // Sadece telefon görünümünde çalışsın
+  
+  const currentScrollTop = window.pageYOffset || document.documentElement.scrollTop;
+  
+  // Sayfa başında ise (50px'e kadar) sidebar'ı göster
+  if (currentScrollTop <= 50) {
+    document.body.classList.add('at-top');
+  } else {
+    // Sayfa başında değilse sidebar'ı gizle
+    document.body.classList.remove('at-top');
+  }
+}
+
+// Scroll event listener'ı ekle
+window.addEventListener("scroll", handleMobileSidebarScroll);
+
+// Sayfa yüklendiğinde kontrol et
+document.addEventListener("DOMContentLoaded", function() {
+  // Sayfa başında ise sidebar'ı göster
+  if (window.pageYOffset <= 50) {
+    document.body.classList.add('at-top');
+  }
+  
+  // Scroll event'ini başlat
+  handleMobileSidebarScroll();
+});
