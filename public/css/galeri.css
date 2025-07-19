@@ -139,6 +139,7 @@ body {
   margin-bottom: 0.5rem;
   transform: translateY(20px);
   transition: transform 0.3s ease;
+  font-weight: 600;
 }
 
 .gallery-overlay p {
