@@ -157,7 +157,8 @@
     justify-content: flex-start;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
     z-index: 1000;
-    background: linear-gradient(90deg, #034165 0%, #e0f7fa 100%);
+    background: rgba(0, 0, 0, 0.8);
+    backdrop-filter: blur(10px);
   }
   .sidebar.open {
     width: 100vw;
@@ -200,7 +201,7 @@
     align-items: center;
     justify-content: center;
     white-space: nowrap;
-    color: #111111 !important;
+    color: #ffffff !important;
     font-weight: 500;
   }
   .sidebar-footer {
