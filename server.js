@@ -43,6 +43,11 @@ app.get("/", (req, res) => {
   res.sendFile(path.join(__dirname, "public/html/index.html"));
 });
 
+// Anasayfa alternatif route'u
+app.get("/anasayfa", (req, res) => {
+  res.sendFile(path.join(__dirname, "public/html/index.html"));
+});
+
 // Diğer HTML sayfaları için yönlendirmeler
 app.get("/surf", (req, res) => {
   res.sendFile(path.join(__dirname, "public/html/surf.html"));
