@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Site Aktif</title>
+    <meta charset="UTF-8">
+</head>
+<body>
+    <h1>✅ Site Aktif</h1>
+    <p>Ansal WindSurf sitesi çalışıyor!</p>
+    <p>Son kontrol: <span id="timestamp"></span></p>
+    
+    <script>
+        document.getElementById('timestamp').textContent = new Date().toLocaleString('tr-TR');
+        
+        // JSON response için
+        if (window.location.search.includes('json')) {
+            const response = {
+                status: "alive",
+                timestamp: new Date().toISOString(),
+                message: "Site aktif ve çalışıyor!"
+            };
+            document.body.innerHTML = JSON.stringify(response, null, 2);
+            document.body.style.fontFamily = 'monospace';
+            document.body.style.whiteSpace = 'pre';
+        }
+    </script>
+</body>
+</html> 

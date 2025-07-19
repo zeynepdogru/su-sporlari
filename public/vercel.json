@@ -1,16 +1,10 @@
 {
   "version": 2,
-  "builds": [
-    { "src": "api/*.js", "use": "@vercel/node" },
-    { "src": "**/*", "use": "@vercel/static" }
-  ],
+  "builds": [{ "src": "**/*", "use": "@vercel/static" }],
   "routes": [
-    { "src": "/api/ping", "dest": "/api/ping.js" },
-    { "src": "/api/health", "dest": "/api/health.js" },
-    { "src": "/api/wake", "dest": "/api/wake.js" },
-    { "src": "/ping", "dest": "/api/ping.js" },
-    { "src": "/health", "dest": "/api/health.js" },
-    { "src": "/wake", "dest": "/api/wake.js" },
+    { "src": "/ping", "dest": "/html/index.html" },
+    { "src": "/health", "dest": "/html/index.html" },
+    { "src": "/wake", "dest": "/html/index.html" },
     { "src": "/surf", "dest": "/html/surf.html" },
     { "src": "/sup", "dest": "/html/sup.html" },
     { "src": "/kano", "dest": "/html/kano.html" },
@@ -20,10 +14,5 @@
     { "src": "/", "dest": "/html/index.html" },
     { "src": "/anasayfa", "dest": "/html/index.html" },
     { "src": "/index.html", "dest": "/html/index.html" }
-  ],
-  "functions": {
-    "api/*.js": {
-      "maxDuration": 30
-    }
-  }
+  ]
 }
