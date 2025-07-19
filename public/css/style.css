@@ -568,7 +568,27 @@ body.sidebar-open {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+  background-attachment: fixed;
   min-height: 100vh;
+  position: relative;
+}
+
+/* Surf sayfası için overlay */
+.surf-bg::before {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.4);
+  z-index: 1;
+}
+
+/* Surf sayfası içeriği overlay'in üzerinde */
+.surf-bg > * {
+  position: relative;
+  z-index: 2;
 }
 /*Scroll buton */
 #scrollToTopBtn {

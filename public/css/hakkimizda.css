@@ -3,8 +3,31 @@
 body {
   margin: 0;
   font-family: "Montserrat", Arial, sans-serif;
-  background: linear-gradient(135deg, #3b82f6 0%, #06b6d4 50%, #60a5fa 100%);
+  background-image: url(/images/kapak2.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
   color: #222;
+  position: relative;
+}
+
+/* Arkaplan üzerine koyu overlay ekle */
+body::before {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.4);
+  z-index: 1;
+}
+
+/* İçerik overlay'in üzerinde olsun */
+body > * {
+  position: relative;
+  z-index: 2;
 }
 
 .main-content {
