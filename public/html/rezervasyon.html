@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="tr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Rezervasyon - Su Sporları Merkezi</title>
+    <link rel="icon" type="image/jpeg" href="/images/logo.jpg" />
+    <link rel="shortcut icon" type="image/jpeg" href="/images/logo.jpg" />
+    <link rel="apple-touch-icon" href="/images/logo.jpg" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/images/logo.jpg" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/images/logo.jpg" />
+    <meta name="msapplication-TileImage" content="/images/logo.jpg" />
+    <meta name="msapplication-TileColor" content="#799EFF" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Montserrat:400,700&display=swap"
+    />
+    <link rel="stylesheet" href="/css/style.css" />
+    <link rel="stylesheet" href="/css/sidebar.css" />
+    <link rel="stylesheet" href="/css/rezervasyon.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body class="with-sidebar">
+    <div id="sidebar-container"></div>
+    <div class="rez-logo-bar">
+      <div class="rez-logo-circle">
+        <img src="/images/logo.jpg" alt="Ansal WindSurf Logo" />
+      </div>
+    
+    </div>
+    <main class="rez-main-center">
+      <div class="rez-card-floating">
+        <div id="formContainer">
+          <h2>Rezervasyon Formu</h2>
+          <div id="errorMessage" class="error-message" style="display: none;"></div>
+          <form id="reservationForm" class="rez-form">
+            <div class="rez-field">
+              <input
+                type="text"
+                id="name"
+                name="name"
+                required
+                placeholder="Ad Soyad"
+              />
+            </div>
+            <div class="rez-field">
+              <input
+                type="email"
+                id="email"
+                name="email"
+                required
+                placeholder="E-posta"
+              />
+            </div>
+            <div class="rez-field">
+              <input
+                type="tel"
+                id="phone"
+                name="phone"
+                required
+                placeholder="Telefon (5xx xxx xx xx)"
+              />
+            </div>
+            <div class="rez-field">
+              <select id="branch" name="branch" required class="custom-select">
+                <option value="">Branş seçiniz..</option>
+                <option value="Kano">🛶 Kano</option>
+                <option value="Surf">🌊 WindSurf</option>
+                <option value="Sup">🏄 SUP</option>
+              </select>
+            </div>
+            <div class="rez-row">
+              <div class="rez-field">
+                <input type="date" id="date" name="date" required />
+              </div>
+              <div class="rez-field">
+                <select id="time" name="time" required></select>
+              </div>
+            </div>
+            <div class="rez-field">
+              <input
+                type="number"
+                id="participants"
+                name="participants"
+                min="1"
+                max="10"
+                required
+                placeholder="Katılımcı Sayısı"
+              />
+            </div>
+            <div class="rez-field">
+              <textarea
+                id="message"
+                name="message"
+                rows="2"
+                placeholder="Ek Not (isteğe bağlı)"
+              ></textarea>
+            </div>
+            <button type="submit" class="rez-btn">
+              <span>Rezervasyon Yap</span> <i class="fas fa-arrow-right"></i>
+            </button>
+          </form>
+        </div>
+      </div>
+      <div id="successMessage" class="rez-success" style="display: none">
+        <div class="custom-success-card">
+          <div class="custom-success-icon">
+            <i class="fas fa-check-circle"></i>
+          </div>
+          <h3>Rezervasyon Başarılı!</h3>
+          <p class="custom-success-desc">
+            Rezervasyonunuz alınmıştır. Rezervasyon bilgileriniz mail adresinize
+            gönderilecektir. En kısa sürede sizinle iletişime geçeceğiz.
+          </p>
+          <div class="custom-success-details">
+            <div>
+              <strong>Branş:</strong> <span id="successBranch">🛶 Kano</span>
+            </div>
+            <div>
+              <strong>Tarih:</strong> <span id="successDate">2024-07-01</span>
+            </div>
+            <div>
+              <strong>Saat:</strong> <span id="successTime">14:00</span>
+            </div>
+          </div>
+          <button
+            class="custom-success-btn"
+            onclick="window.location.href='index.html'"
+          >
+            Ana Sayfaya Dön
+          </button>
+        </div>
+      </div>
+    </main>
+    <script src="/js/script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <script>
+      (function () {
+        emailjs.init("9hJs-Ce03kKKXG3hB");
+      })();
+    </script>
+    <script src="/js/reservation.js"></script>
+    <!-- <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        document.querySelector(".rez-card-floating").style.display = "none";
+        document.getElementById("successMessage").style.display = "block";
+      });
+    </script> -->
+  </body>
+</html>

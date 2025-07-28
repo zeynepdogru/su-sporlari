@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Ping Test</title>
+  </head>
+  <body>
+    <h1>🔍 Ping Test Sonucu</h1>
+    <pre id="result">Yükleniyor...</pre>
+
+    <script>
+      // /ping endpoint'ine istek gönder
+      fetch("https://su-sporlari.onrender.com/ping", {
+        cache: "no-store",
+      })
+        .then((response) => {
+          const contentType = response.headers.get("content-type");
+          if (!contentType || !contentType.includes("application/json")) {
+            throw new Error("Sunucu JSON yerine HTML döndürdü.");
+          }
+          return response.json();
+        })
+        .then((data) => {
+          document.getElementById("result").textContent = JSON.stringify(
+            data,
+            null,
+            2
+          );
+        })
+        .catch((error) => {
+          document.getElementById(
+            "result"
+          ).textContent = `❌ Hata: ${error.message}`;
+        });
+    </script>
+  </body>
+</html>

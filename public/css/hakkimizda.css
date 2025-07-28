@@ -1,0 +1,186 @@
+@import url("https://fonts.googleapis.com/css?family=Montserrat:400,700&display=swap");
+
+body {
+  margin: 0;
+  font-family: "Montserrat", Arial, sans-serif;
+  background: linear-gradient(135deg, #200E3A 0%, #2D1B4E 50%, #1A0B2E 100%);
+  color: #222;
+  position: relative;
+}
+
+/* İçerik z-index ayarı */
+body > * {
+  position: relative;
+  z-index: 1;
+}
+
+.main-content {
+  padding: 0;
+}
+
+.container {
+  width: 80%;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+/* About Cards */
+.about-cards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2.5rem;
+  justify-content: center;
+  margin-bottom: 4rem;
+  margin-top: 2rem;
+}
+.about-card {
+  background: linear-gradient(135deg, #2B194B 0%, #1E0F35 100%) !important;
+  border-radius: 24px;
+  box-shadow: 0 8px 32px rgba(43, 25, 75, 0.3);
+  overflow: hidden;
+  width: 40%;
+  display: flex;
+  flex-direction: column;
+  transition: all 0.3s ease;
+}
+.about-card:hover {
+  transform: translateY(-8px) scale(1.03);
+  box-shadow: 0 20px 50px rgba(43, 25, 75, 0.6) !important, 0 10px 30px rgba(43, 25, 75, 0.4) !important;
+}
+.about-card img {
+  width: 100%;
+  height: 400px;
+  object-fit: cover;
+  border-bottom: 4px solid #06b6d4;
+}
+.about-card a {
+  word-break: break-all;
+}
+.card-content {
+  padding: 2rem 1.5rem 1.5rem 1.5rem;
+}
+.card-content h2 {
+  font-size: 1.2rem;
+  color: #FFDE63;
+  margin-bottom: 1rem;
+}
+.card-content p {
+  font-size: clamp(1rem, 2vw, 1.2rem);
+  color: #FEFFC4;
+  line-height: 1.7;
+}
+
+/* Values Section */
+.about-values {
+  margin: 4rem 0 3rem 0;
+  text-align: center;
+}
+.about-values h2 {
+  font-size: 1.7rem;
+  color: #FFDE63;
+  margin-bottom: 2.5rem;
+  font-weight: 700;
+}
+.values-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 2rem;
+  max-width: 900px;
+  margin: 0 auto;
+}
+.value-card {
+  background: linear-gradient(135deg, #2B194B 0%, #1E0F35 100%) !important;
+  border-radius: 18px;
+  box-shadow: 0 8px 25px rgba(43, 25, 75, 0.3);
+  padding: 2.2rem 1.2rem 1.5rem 1.2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: all 0.3s ease;
+}
+.value-card:hover {
+  transform: translateY(-8px) scale(1.04);
+  box-shadow: 0 20px 50px rgba(43, 25, 75, 0.6) !important, 0 10px 30px rgba(43, 25, 75, 0.4) !important;
+}
+.value-card i {
+  font-size: 2.5rem;
+  color: #FFDE63;
+  margin-bottom: 1rem;
+}
+.value-card h3 {
+  font-size: 1.2rem;
+  color: #FFDE63;
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+}
+.value-card p {
+  font-size: 1rem;
+  color: #FEFFC4;
+}
+
+/* RESPONSIVE*/
+
+@media (max-width: 992px) {
+  body {
+    padding-top: 60px;
+  }
+  .about-cards {
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+  }
+  .about-card {
+    width: 100%;
+    max-width: 400px;
+  }
+}
+@media (max-width: 768px) {
+  .about-cards {
+    gap: 1.2rem;
+  }
+  .about-card img {
+    height: 300px;
+  }
+  .card-content {
+    padding: 1.2rem 0.7rem 1rem 0.7rem;
+  }
+  .about-values {
+    margin: 2.5rem 0 1.5rem 0;
+  }
+  .values-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (min-width: 901px) {
+  .about-card:first-of-type {
+    display: flex;
+    flex-direction: row;
+    align-items: stretch;
+    width: 80%;
+    max-width: 1100px;
+    margin: 0 auto 2rem auto;
+  }
+  .about-card:first-of-type img {
+    width: 45%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 24px 0 0 24px;
+    min-width: 180px;
+    max-width: 350px;
+  }
+  .about-card:first-of-type .card-content {
+    width: 55%;
+    padding: 2rem 2rem 2rem 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .about-card:first-of-type .card-content p {
+    font-size: 1.2rem;
+  }
+}
+@media (max-width: 480px) {
+  .values-grid {
+    grid-template-columns: 1fr;
+  }
+}

@@ -1,0 +1,354 @@
+/* Sidebar container - Genel stiller */
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: clamp(3.5rem, 5vw, 5rem);
+  background: linear-gradient(180deg, #200E3A 0%, #2D1B4E 100%);
+  backdrop-filter: blur(10px);
+  transition: all 0.3s ease;
+  overflow-x: hidden;
+  z-index: 9999;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  box-shadow: 2px 0 15px rgba(32, 14, 58, 0.3);
+}
+
+/* Açıldığında genişliği */
+.sidebar.open {
+  width: min(320px, 80vw);
+}
+.sidebar-close {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  font-size: 2.2rem;
+  color: white;
+  background: none;
+  border: none;
+  cursor: pointer;
+  z-index: 9999;
+  display: none;
+}
+/* Toggle butonu (☰) */
+.sidebar-toggle {
+  background: none;
+  border: none;
+  color: #799EFF;
+  font-size: clamp(1.5rem, 3vw, 2rem);
+  margin: 1rem;
+  cursor: pointer;
+  width: 50%;
+  padding: 0.5rem;
+  transition: transform 0.3s ease;
+}
+
+.sidebar-toggle:hover {
+  transform: scale(1.1);
+}
+
+.sidebar-content {
+  margin-top: 2rem;
+  display: none;
+  width: 100%;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.sidebar.open .sidebar-content {
+  display: block;
+  opacity: 1;
+}
+
+.sidebar.open .sidebar-toggle {
+  display: none;
+}
+
+.sidebar-content ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  width: 100%;
+  font-size: clamp(1rem, 2.5vw, 1.2rem);
+}
+
+.sidebar-content li {
+  width: 100%;
+}
+
+.sidebar-content a {
+  display: block;
+  padding: clamp(0.8rem, 2vw, 1rem);
+  color: #799EFF !important;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+  font-weight: bold;
+}
+
+.sidebar-content a:hover {
+  background-color: rgba(255, 188, 76, 0.3);
+  padding-left: clamp(1rem, 2.5vw, 1.2rem);
+  color: #FFBC4C !important;
+}
+
+.sidebar-content a::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  background-color: rgba(255, 255, 255, 0.1);
+  transform: scaleX(0);
+  transition: transform 0.3s ease;
+}
+
+.sidebar-content a:hover::after {
+  transform: scaleX(1);
+}
+
+/* iconlar - Genel stiller */
+.sidebar-footer {
+  display: flex;
+  flex-direction: column;
+  gap: clamp(1rem, 2vw, 1.5rem);
+  padding: clamp(0.8rem, 2vw, 1rem);
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  margin-top: auto;
+}
+
+.sidebar-footer .social-icon {
+  color: #799EFF !important;
+}
+
+.sidebar-footer .social-icon:hover {
+  color: #799EFF !important;
+}
+
+.social-icon {
+  font-size: clamp(1.2rem, 2.5vw, 1.5rem);
+  color: #799EFF !important;
+  transition: all 0.3s ease;
+}
+
+.social-icon:hover {
+  transform: scale(1.2);
+  color: #799EFF !important;
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 768px) {
+  .sidebar.open {
+    width: min(240px, 70vw);
+    left: 0;
+    background: linear-gradient(180deg, #200E3A 0%, #2D1B4E 100%);
+    backdrop-filter: blur(10px);
+  }
+
+  .sidebar-content a {
+    text-align: center;
+    font-size: 0.9rem;
+  }
+}
+
+/* Büyük ekranlarda dikey sidebar korunur */
+@media (min-width: 993px) {
+  .sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: clamp(3.5rem, 5vw, 5rem);
+    background: linear-gradient(180deg, #200E3A 0%, #2D1B4E 100%);
+    backdrop-filter: blur(10px);
+    transition: all 0.3s ease;
+    overflow-x: hidden;
+    z-index: 9999;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    box-shadow: 2px 0 15px rgba(32, 14, 58, 0.3);
+  }
+  
+  .sidebar.open {
+    width: min(320px, 80vw);
+  }
+  
+  .sidebar-content {
+    margin-top: 2rem;
+    display: none;
+    width: 100%;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+  }
+  
+  .sidebar.open .sidebar-content {
+    display: block;
+    opacity: 1;
+  }
+  
+  .sidebar-content ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    font-size: clamp(1rem, 2.5vw, 1.2rem);
+  }
+  
+  .sidebar-content li {
+    width: 100%;
+  }
+  
+  .sidebar-content a {
+    display: block;
+    padding: clamp(0.8rem, 2vw, 1rem);
+    color: #799EFF !important;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+    font-weight: bold;
+  }
+  
+  .sidebar-content a:hover {
+    background-color: rgba(255, 188, 76, 0.3);
+    padding-left: clamp(1rem, 2.5vw, 1.2rem);
+    color: #FFBC4C !important;
+  }
+  
+  .sidebar-footer {
+    display: flex;
+    flex-direction: column;
+    gap: clamp(1rem, 2vw, 1.5rem);
+    padding: clamp(0.8rem, 2vw, 1rem);
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    margin-top: auto;
+  }
+  
+  .sidebar-content ul li:nth-child(2), /* WindSurf */
+  .sidebar-content ul li:nth-child(3), /* SUP */
+  .sidebar-content ul li:nth-child(4)  /* Kano */ {
+    display: block;
+  }
+}
+
+/* Küçük ve orta ekranlarda yatay sidebar */
+@media (max-width: 992px) {
+  .sidebar {
+    position: fixed !important;
+    top: 0 !important;
+    left: 0 !important;
+    width: 100vw !important;
+    height: 60px !important;
+    flex-direction: row !important;
+    align-items: center !important;
+    justify-content: flex-start !important;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5) !important;
+    z-index: 2147483647 !important;
+    background: #1a0f2e !important;
+    backdrop-filter: blur(10px) !important;
+    border-bottom: 2px solid #799EFF !important;
+    transition: transform 0.3s ease !important;
+  }
+  
+  /* Sayfa başında değilse sidebar'ı gizle */
+  body:not(.at-top) .sidebar {
+    transform: translateY(-100%);
+  }
+  
+  .sidebar.open {
+    width: 100vw;
+    height: 60px;
+    padding-right: 1.2rem;
+    flex-direction: row;
+  }
+  
+  .sidebar-content {
+    display: flex !important;
+    flex-direction: row;
+    align-items: center;
+    margin-top: 0;
+    width: 100%;
+    opacity: 1;
+    position: static;
+    background: none;
+    height: 60px;
+  }
+  
+  .sidebar-content ul {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100%;
+    justify-content: flex-start;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .sidebar-content li {
+    width: auto;
+    flex: 1 1 0;
+    min-width: 0;
+  }
+  
+  .sidebar-content a {
+    padding: 0 0.5rem;
+    font-size: 0.85rem;
+    text-align: center;
+    height: 44px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    white-space: nowrap;
+    color: #EC625F !important;
+    font-weight: bold;
+  }
+  
+  .sidebar-content a,
+  .sidebar-content a:link,
+  .sidebar-content a:visited {
+    color: #FFDE63 !important;
+    font-weight: bold;
+    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.8);
+  }
+  
+  .sidebar-footer {
+    display: none;
+  }
+  
+  .sidebar-toggle,
+  .sidebar-close {
+    display: none !important;
+  }
+  
+  .sidebar-content a:hover,
+  .sidebar-content a:focus,
+  .sidebar-content a:active {
+    background-color: rgba(236, 98, 95, 0.8) !important;
+    color: #FFFFFF !important;
+    text-shadow: 0 1px 3px rgba(0, 0, 0, 1);
+  }
+  
+  /* Mobilde galeri linkini öne çıkar */
+  .sidebar-content ul li:nth-child(5) a { /* Galeri */
+    color: #FFDE63 !important;
+    font-weight: bold !important;
+  }
+  
+  .sidebar-content ul li:nth-child(5) a:hover {
+    background-color: rgba(236, 98, 95, 0.8) !important;
+    color: #FFFFFF !important;
+  }
+  
+  .sidebar-content ul li:nth-child(2), /* WindSurf */
+  .sidebar-content ul li:nth-child(3), /* SUP */
+  .sidebar-content ul li:nth-child(4)  /* Kano */ {
+    display: none;
+  }
+}

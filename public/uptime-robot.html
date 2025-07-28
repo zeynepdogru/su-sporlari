@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Uptime Check</title>
+  </head>
+  <body>
+    <h1>Site Aktif</h1>
+    <p>Bu sayfa Uptime Robot tarafından kontrol edilmektedir.</p>
+    <script>
+      function ping() {
+        fetch("https://su-sporlari.onrender.com/ping")
+          .then((res) => res.json())
+          .then((data) => console.log("Ping başarılı:", data))
+          .catch((err) => console.error("Ping hatası:", err));
+      }
+
+      // Sayfa açılır açılmaz ping at
+      ping();
+
+      // 5 dakikada bir ping at
+      setInterval(ping, 5 * 60 * 1000);
+    </script>
+  </body>
+</html>
