@@ -119,22 +119,19 @@ app.post("/api/reservations", async (req, res) => {
     const savedReservation = await newReservation.save();
     console.log("Rezervasyon kaydedildi:", savedReservation); // Debug için log
 
-    // Bugünün tarihini al
-    const today = new Date();
-    today.setHours(0, 0, 0, 0);
+    // Türkiye (Europe/Istanbul) yerel gününe göre YYYY-MM-DD üret
+    const istanbulNow = new Date();
+    const formatter = new Intl.DateTimeFormat("en-CA", {
+      timeZone: "Europe/Istanbul",
+      year: "numeric",
+      month: "2-digit",
+      day: "2-digit",
+    });
+    const todayStrTr = formatter.format(istanbulNow); // en-CA -> YYYY-MM-DD
 
     // Bugün ve gelecek tarihteki rezervasyonları getir
     const allReservations = await Reservation.find({
-      $or: [
-        // Bugünün rezervasyonları
-        {
-          date: today.toISOString().split("T")[0],
-        },
-        // Gelecek tarihteki rezervasyonlar
-        {
-          date: { $gt: today.toISOString().split("T")[0] },
-        },
-      ],
+      $or: [{ date: todayStrTr }, { date: { $gt: todayStrTr } }],
     }).sort({ date: 1, time: 1 });
 
     console.log("Bulunan rezervasyonlar:", allReservations); // Debug için log
